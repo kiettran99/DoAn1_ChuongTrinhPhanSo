@@ -16,5 +16,10 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            tabControl.SelectedIndex = 1;
+        }
     }
 }
