@@ -42,6 +42,10 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Referesh()
         {
+            cal.Num1.Reset();
+            cal.Num2.Reset();
+            cal.Result.Reset();
+
             //Thiết lập lại các thuộc tính.
             txtNumerator1.Text = txtNumerator2.Text = "0";
             txtDemoinator1.Text = txtDemoinator2.Text = "1";
@@ -50,6 +54,10 @@ namespace DoAn1_ChuongTrinhPhanSo
             txtDemoResult.ResetText();
 
             lbMath.Text = "+";
+
+            preMath = "+";
+            isMulti = false;
+            isInput = false;
         }
 
         private void Call(string lb)

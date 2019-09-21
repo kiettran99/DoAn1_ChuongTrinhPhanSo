@@ -49,6 +49,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtDemoinator1 = new System.Windows.Forms.TextBox();
             this.txtNumerator1 = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.Location = new System.Drawing.Point(-5, -1);
             this.tabControl.Name = "tabControl";
@@ -268,6 +270,16 @@
             this.txtNumerator1.TabIndex = 1;
             this.txtNumerator1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 38);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(791, 356);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Phép Tính Khác";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -316,6 +328,7 @@
         private System.Windows.Forms.Button btnSubtract;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 
