@@ -41,14 +41,14 @@
             this.btnSubtract = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtMSKQ = new System.Windows.Forms.TextBox();
-            this.txtTSKQ = new System.Windows.Forms.TextBox();
+            this.txtDemoResult = new System.Windows.Forms.TextBox();
+            this.txtNumResult = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMS2 = new System.Windows.Forms.TextBox();
-            this.txtTS2 = new System.Windows.Forms.TextBox();
+            this.txtDemoinator2 = new System.Windows.Forms.TextBox();
+            this.txtNumerator2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtMS1 = new System.Windows.Forms.TextBox();
-            this.txtTS1 = new System.Windows.Forms.TextBox();
+            this.txtDemoinator1 = new System.Windows.Forms.TextBox();
+            this.txtNumerator1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -189,8 +189,8 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.txtMSKQ);
-            this.groupBox3.Controls.Add(this.txtTSKQ);
+            this.groupBox3.Controls.Add(this.txtDemoResult);
+            this.groupBox3.Controls.Add(this.txtNumResult);
             this.groupBox3.Enabled = false;
             this.groupBox3.Location = new System.Drawing.Point(393, 79);
             this.groupBox3.Name = "groupBox3";
@@ -198,75 +198,75 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             // 
-            // txtMSKQ
+            // txtDemoResult
             // 
-            this.txtMSKQ.Location = new System.Drawing.Point(7, 89);
-            this.txtMSKQ.Name = "txtMSKQ";
-            this.txtMSKQ.Size = new System.Drawing.Size(70, 35);
-            this.txtMSKQ.TabIndex = 3;
-            this.txtMSKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDemoResult.Location = new System.Drawing.Point(7, 89);
+            this.txtDemoResult.Name = "txtDemoResult";
+            this.txtDemoResult.Size = new System.Drawing.Size(70, 35);
+            this.txtDemoResult.TabIndex = 3;
+            this.txtDemoResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTSKQ
+            // txtNumResult
             // 
-            this.txtTSKQ.Location = new System.Drawing.Point(7, 27);
-            this.txtTSKQ.Name = "txtTSKQ";
-            this.txtTSKQ.Size = new System.Drawing.Size(70, 35);
-            this.txtTSKQ.TabIndex = 2;
-            this.txtTSKQ.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumResult.Location = new System.Drawing.Point(7, 27);
+            this.txtNumResult.Name = "txtNumResult";
+            this.txtNumResult.Size = new System.Drawing.Size(70, 35);
+            this.txtNumResult.TabIndex = 2;
+            this.txtNumResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtMS2);
-            this.groupBox2.Controls.Add(this.txtTS2);
+            this.groupBox2.Controls.Add(this.txtDemoinator2);
+            this.groupBox2.Controls.Add(this.txtNumerator2);
             this.groupBox2.Location = new System.Drawing.Point(211, 79);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(85, 145);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
-            // txtMS2
+            // txtDemoinator2
             // 
-            this.txtMS2.Location = new System.Drawing.Point(7, 89);
-            this.txtMS2.Name = "txtMS2";
-            this.txtMS2.Size = new System.Drawing.Size(70, 35);
-            this.txtMS2.TabIndex = 4;
-            this.txtMS2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtMS2.TextChanged += new System.EventHandler(this.TxtTS2_TextChanged);
+            this.txtDemoinator2.Location = new System.Drawing.Point(7, 89);
+            this.txtDemoinator2.Name = "txtDemoinator2";
+            this.txtDemoinator2.Size = new System.Drawing.Size(70, 35);
+            this.txtDemoinator2.TabIndex = 4;
+            this.txtDemoinator2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDemoinator2.TextChanged += new System.EventHandler(this.TxtTS2_TextChanged);
             // 
-            // txtTS2
+            // txtNumerator2
             // 
-            this.txtTS2.Location = new System.Drawing.Point(7, 27);
-            this.txtTS2.Name = "txtTS2";
-            this.txtTS2.Size = new System.Drawing.Size(70, 35);
-            this.txtTS2.TabIndex = 3;
-            this.txtTS2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtTS2.TextChanged += new System.EventHandler(this.TxtTS2_TextChanged);
+            this.txtNumerator2.Location = new System.Drawing.Point(7, 27);
+            this.txtNumerator2.Name = "txtNumerator2";
+            this.txtNumerator2.Size = new System.Drawing.Size(70, 35);
+            this.txtNumerator2.TabIndex = 3;
+            this.txtNumerator2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumerator2.TextChanged += new System.EventHandler(this.TxtTS2_TextChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtMS1);
-            this.groupBox1.Controls.Add(this.txtTS1);
+            this.groupBox1.Controls.Add(this.txtDemoinator1);
+            this.groupBox1.Controls.Add(this.txtNumerator1);
             this.groupBox1.Location = new System.Drawing.Point(38, 79);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(85, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // txtMS1
+            // txtDemoinator1
             // 
-            this.txtMS1.Location = new System.Drawing.Point(7, 89);
-            this.txtMS1.Name = "txtMS1";
-            this.txtMS1.Size = new System.Drawing.Size(70, 35);
-            this.txtMS1.TabIndex = 2;
-            this.txtMS1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDemoinator1.Location = new System.Drawing.Point(7, 89);
+            this.txtDemoinator1.Name = "txtDemoinator1";
+            this.txtDemoinator1.Size = new System.Drawing.Size(70, 35);
+            this.txtDemoinator1.TabIndex = 2;
+            this.txtDemoinator1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtTS1
+            // txtNumerator1
             // 
-            this.txtTS1.Location = new System.Drawing.Point(7, 27);
-            this.txtTS1.Name = "txtTS1";
-            this.txtTS1.Size = new System.Drawing.Size(70, 35);
-            this.txtTS1.TabIndex = 1;
-            this.txtTS1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumerator1.Location = new System.Drawing.Point(7, 27);
+            this.txtNumerator1.Name = "txtNumerator1";
+            this.txtNumerator1.Size = new System.Drawing.Size(70, 35);
+            this.txtNumerator1.TabIndex = 1;
+            this.txtNumerator1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -299,15 +299,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtMS1;
-        private System.Windows.Forms.TextBox txtTS1;
+        private System.Windows.Forms.TextBox txtDemoinator1;
+        private System.Windows.Forms.TextBox txtNumerator1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtMSKQ;
-        private System.Windows.Forms.TextBox txtTSKQ;
+        private System.Windows.Forms.TextBox txtDemoResult;
+        private System.Windows.Forms.TextBox txtNumResult;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtMS2;
-        private System.Windows.Forms.TextBox txtTS2;
+        private System.Windows.Forms.TextBox txtDemoinator2;
+        private System.Windows.Forms.TextBox txtNumerator2;
         private System.Windows.Forms.Label lbMath;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnResult;

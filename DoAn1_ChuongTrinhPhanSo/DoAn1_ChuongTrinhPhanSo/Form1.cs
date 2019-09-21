@@ -43,11 +43,11 @@ namespace DoAn1_ChuongTrinhPhanSo
         public void Referesh()
         {
             //Thiết lập lại các thuộc tính.
-            txtTS1.Text = txtTS2.Text = "0";
-            txtMS1.Text = txtMS2.Text = "1";
+            txtNumerator1.Text = txtNumerator2.Text = "0";
+            txtDemoinator1.Text = txtDemoinator2.Text = "1";
 
-            txtTSKQ.ResetText();
-            txtMSKQ.ResetText();
+            txtNumResult.ResetText();
+            txtDemoResult.ResetText();
 
             lbMath.Text = "+";
         }
@@ -70,8 +70,8 @@ namespace DoAn1_ChuongTrinhPhanSo
                     break;
             }
             isInput = false;
-            txtTSKQ.Text = cal.Result.Numerator.ToString();
-            txtMSKQ.Text = cal.Result.Demoinator.ToString();
+            txtNumResult.Text = cal.Result.Numerator.ToString();
+            txtDemoResult.Text = cal.Result.Demoinator.ToString();
         }
 
 
@@ -90,23 +90,23 @@ namespace DoAn1_ChuongTrinhPhanSo
             if (isMulti)
             {
                 cal.Num1.Coppy(cal.Result);
-                txtTS1.Text = cal.Num1.Numerator.ToString();
-                txtMS1.Text = cal.Num1.Demoinator.ToString();
+                txtNumerator1.Text = cal.Num1.Numerator.ToString();
+                txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
 
                 if (!isInput)
                 {
                     cal.Num2.Reset();
-                    txtTS2.Text = "0";
-                    txtMS2.Text = "1";
+                    txtNumerator2.Text = "0";
+                    txtDemoinator2.Text = "1";
                 }
                 else
                 {
-                    cal.Num2.Assign(int.Parse(txtTS2.Text), int.Parse(txtMS2.Text));
+                    cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
                 }
 
-                cal.Result.Reset();
-                txtTSKQ.Text = "0";
-                txtMSKQ.Text = "1";
+                //cal.Result.Reset();
+                //txtTSKQ.Text = "0";
+                //txtMSKQ.Text = "1";
 
                 Call(preMath);
             }
@@ -120,23 +120,23 @@ namespace DoAn1_ChuongTrinhPhanSo
             if (isMulti)
             {
                 cal.Num1.Coppy(cal.Result);
-                txtTS1.Text = cal.Num1.Numerator.ToString();
-                txtMS1.Text = cal.Num1.Demoinator.ToString();
+                txtNumerator1.Text = cal.Num1.Numerator.ToString();
+                txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
 
                 if (!isInput)
                 {
                     cal.Num2.Reset();
-                    txtTS2.Text = "0";
-                    txtMS2.Text = "1";
+                    txtNumerator2.Text = "0";
+                    txtDemoinator2.Text = "1";
                 }
                 else
                 {
-                    cal.Num2.Assign(int.Parse(txtTS2.Text), int.Parse(txtMS2.Text));
+                    cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
                 }
 
-                cal.Result.Reset();
-                txtTSKQ.Text = "0";
-                txtMSKQ.Text = "1";
+                //cal.Result.Reset();
+                //txtTSKQ.Text = "0";
+                //txtMSKQ.Text = "1";
 
                 Call(preMath);
             }
@@ -150,25 +150,25 @@ namespace DoAn1_ChuongTrinhPhanSo
             if (isMulti)
             {
                 cal.Num1.Coppy(cal.Result);
-                txtTS1.Text = cal.Num1.Numerator.ToString();
-                txtMS1.Text = cal.Num1.Demoinator.ToString();
+                txtNumerator1.Text = cal.Num1.Numerator.ToString();
+                txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
 
                 if (!isInput)
                 {
                     cal.Num2.Reset();
-                    txtTS2.Text = "0";
-                    txtMS2.Text = "1";
+                    txtNumerator2.Text = "0";
+                    txtDemoinator2.Text = "1";
+                    Call("+");
                 }
                 else
                 {
-                    cal.Num2.Assign(int.Parse(txtTS2.Text), int.Parse(txtMS2.Text));
+                    cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                    Call(preMath);
                 }
 
-                cal.Result.Reset();
-                txtTSKQ.Text = "0";
-                txtMSKQ.Text = "1";
-
-                Call(preMath);
+                //cal.Result.Reset();
+                //txtTSKQ.Text = "0";
+                //txtMSKQ.Text = "1";
             }
         }
 
@@ -180,33 +180,33 @@ namespace DoAn1_ChuongTrinhPhanSo
             if (isMulti)
             {
                 cal.Num1.Coppy(cal.Result);
-                txtTS1.Text = cal.Num1.Numerator.ToString();
-                txtMS1.Text = cal.Num1.Demoinator.ToString();
+                txtNumerator1.Text = cal.Num1.Numerator.ToString();
+                txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
 
                 if (!isInput)
                 {
                     cal.Num2.Reset();
-                    txtTS2.Text = "0";
-                    txtMS2.Text = "1";
+                    txtNumerator2.Text = "0";
+                    txtDemoinator2.Text = "1";
+                    Call("+");
                 }
                 else
                 {
-                    cal.Num2.Assign(int.Parse(txtTS2.Text), int.Parse(txtMS2.Text));
+                    cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                    Call(preMath);
                 }
 
-                cal.Result.Reset();
-                txtTSKQ.Text = "0";
-                txtMSKQ.Text = "1";
-
-                Call(preMath);
+                //cal.Result.Reset();
+                //txtTSKQ.Text = "0";
+                //txtMSKQ.Text = "1";
             }
         }
 
         private void BtnResult_Click(object sender, EventArgs e)
         {
             preMath = lbMath.Text;
-            cal.Num1.Assign(int.Parse(txtTS1.Text), int.Parse(txtMS1.Text));
-            cal.Num2.Assign(int.Parse(txtTS2.Text), int.Parse(txtMS2.Text));
+            cal.Num1.Assign(int.Parse(txtNumerator1.Text), int.Parse(txtDemoinator1.Text));
+            cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
             Call(lbMath.Text);
             isMulti = true;
         }

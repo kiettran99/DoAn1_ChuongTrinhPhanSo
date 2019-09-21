@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DoAn1_ChuongTrinhPhanSo
 {
@@ -37,7 +38,7 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
             result.Demoinator = num1.Demoinator * num2.Demoinator;
-            //Result.Minimalism();
+            Result.Minimalism();
         }
 
         public void Subtract()
@@ -56,9 +57,16 @@ namespace DoAn1_ChuongTrinhPhanSo
 
         public void Divide()
         {
-            result.Numerator = num1.Numerator * num2.Demoinator;
-            result.Demoinator = num1.Demoinator * num2.Numerator;
-            Result.Minimalism();
+            if (num2.Numerator == 0)
+            {
+                MessageBox.Show("Tử số của thứ 2 không được bằng 0 với phép chia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                result.Numerator = num1.Numerator * num2.Demoinator;
+                result.Demoinator = num1.Demoinator * num2.Numerator;
+                Result.Minimalism();
+            }
         }
     }
 }
