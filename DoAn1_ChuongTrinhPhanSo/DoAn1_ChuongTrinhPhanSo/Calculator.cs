@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DoAn1_ChuongTrinhPhanSo
 {
@@ -59,7 +58,7 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             if (num2.Numerator == 0)
             {
-                MessageBox.Show("Tử số của thứ 2 không được bằng 0 với phép chia", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                throw new Exception("Tử số của thứ 2 không được bằng 0 với phép chia");
             }
             else
             {
@@ -67,6 +66,21 @@ namespace DoAn1_ChuongTrinhPhanSo
                 result.Demoinator = num1.Demoinator * num2.Numerator;
                 Result.Minimalism();
             }
+        }
+
+        /// <summary>
+        ///   Phương thức so sánh 2 phân số.
+        ///   Trả về (0) 2 số bằng nhau, (1) số thứ nhất lớn hơn, (-1) số thứ nhất bé hơn.
+        /// </summary>
+        public int Compare()
+        {
+            this.Subtract();
+
+            if (result.Numerator == 0) return 0;
+            else if (result.Numerator < 0) return -1;
+            else if (result.Numerator > 0) return 1;
+
+            return -2;      //Lỗi
         }
     }
 }

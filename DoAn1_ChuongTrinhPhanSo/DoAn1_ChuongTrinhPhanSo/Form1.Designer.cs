@@ -50,12 +50,60 @@
             this.txtDemoinator1 = new System.Windows.Forms.TextBox();
             this.txtNumerator1 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.resultChangeNum = new System.Windows.Forms.TextBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.demoChangeNum = new System.Windows.Forms.TextBox();
+            this.numChangeNum = new System.Windows.Forms.TextBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lbCompare = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.demoCompare2 = new System.Windows.Forms.TextBox();
+            this.numCompare2 = new System.Windows.Forms.TextBox();
+            this.wholeCompare2 = new System.Windows.Forms.TextBox();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.demoCompare1 = new System.Windows.Forms.TextBox();
+            this.numCompare1 = new System.Windows.Forms.TextBox();
+            this.wholeCompare1 = new System.Windows.Forms.TextBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.texttChangeFrac = new System.Windows.Forms.TextBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.numChangeFrac2 = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.demoRsMini = new System.Windows.Forms.TextBox();
+            this.numRsMini = new System.Windows.Forms.TextBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.demoMini = new System.Windows.Forms.TextBox();
+            this.numMini = new System.Windows.Forms.TextBox();
+            this.wholeMini = new System.Windows.Forms.TextBox();
+            this.demoChangeFrac2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.demoChangeFrac1 = new System.Windows.Forms.TextBox();
+            this.numChangeFrac1 = new System.Windows.Forms.TextBox();
+            this.wholeChangeFrac1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -69,6 +117,7 @@
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(799, 398);
             this.tabControl.TabIndex = 0;
+            this.tabControl.SelectedIndexChanged += new System.EventHandler(this.TabControl_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -272,13 +321,370 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.BackColor = System.Drawing.Color.White;
+            this.tabPage3.Controls.Add(this.groupBox7);
+            this.tabPage3.Controls.Add(this.groupBox8);
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(238)))), ((int)(((byte)(204)))));
             this.tabPage3.Location = new System.Drawing.Point(4, 38);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(791, 356);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Phép Tính Khác";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label4);
+            this.groupBox7.Controls.Add(this.resultChangeNum);
+            this.groupBox7.Controls.Add(this.groupBox12);
+            this.groupBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(137)))), ((int)(((byte)(255)))));
+            this.groupBox7.Location = new System.Drawing.Point(394, 179);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(387, 166);
+            this.groupBox7.TabIndex = 7;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Phân Số Thành Thập Phân";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(127, 90);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(27, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "=";
+            // 
+            // resultChangeNum
+            // 
+            this.resultChangeNum.Enabled = false;
+            this.resultChangeNum.Location = new System.Drawing.Point(184, 84);
+            this.resultChangeNum.Name = "resultChangeNum";
+            this.resultChangeNum.Size = new System.Drawing.Size(191, 35);
+            this.resultChangeNum.TabIndex = 8;
+            this.resultChangeNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.demoChangeNum);
+            this.groupBox12.Controls.Add(this.numChangeNum);
+            this.groupBox12.Location = new System.Drawing.Point(21, 34);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(99, 121);
+            this.groupBox12.TabIndex = 7;
+            this.groupBox12.TabStop = false;
+            // 
+            // demoChangeNum
+            // 
+            this.demoChangeNum.Location = new System.Drawing.Point(19, 80);
+            this.demoChangeNum.Name = "demoChangeNum";
+            this.demoChangeNum.Size = new System.Drawing.Size(60, 35);
+            this.demoChangeNum.TabIndex = 5;
+            this.demoChangeNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.demoChangeNum.TextChanged += new System.EventHandler(this.TextNumber_TextChanged);
+            // 
+            // numChangeNum
+            // 
+            this.numChangeNum.Location = new System.Drawing.Point(19, 19);
+            this.numChangeNum.Name = "numChangeNum";
+            this.numChangeNum.Size = new System.Drawing.Size(60, 35);
+            this.numChangeNum.TabIndex = 4;
+            this.numChangeNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numChangeNum.TextChanged += new System.EventHandler(this.TextNumber_TextChanged);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lbCompare);
+            this.groupBox8.Controls.Add(this.groupBox13);
+            this.groupBox8.Controls.Add(this.groupBox14);
+            this.groupBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(137)))), ((int)(((byte)(255)))));
+            this.groupBox8.Location = new System.Drawing.Point(394, 2);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(387, 166);
+            this.groupBox8.TabIndex = 6;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "So Sánh Phân Số";
+            // 
+            // lbCompare
+            // 
+            this.lbCompare.AutoSize = true;
+            this.lbCompare.Location = new System.Drawing.Point(179, 81);
+            this.lbCompare.Name = "lbCompare";
+            this.lbCompare.Size = new System.Drawing.Size(25, 29);
+            this.lbCompare.TabIndex = 7;
+            this.lbCompare.Text = "?";
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.demoCompare2);
+            this.groupBox13.Controls.Add(this.numCompare2);
+            this.groupBox13.Controls.Add(this.wholeCompare2);
+            this.groupBox13.Location = new System.Drawing.Point(236, 27);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(145, 121);
+            this.groupBox13.TabIndex = 4;
+            this.groupBox13.TabStop = false;
+            // 
+            // demoCompare2
+            // 
+            this.demoCompare2.Location = new System.Drawing.Point(79, 80);
+            this.demoCompare2.Name = "demoCompare2";
+            this.demoCompare2.Size = new System.Drawing.Size(60, 35);
+            this.demoCompare2.TabIndex = 5;
+            this.demoCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.demoCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // numCompare2
+            // 
+            this.numCompare2.Location = new System.Drawing.Point(79, 19);
+            this.numCompare2.Name = "numCompare2";
+            this.numCompare2.Size = new System.Drawing.Size(60, 35);
+            this.numCompare2.TabIndex = 4;
+            this.numCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // wholeCompare2
+            // 
+            this.wholeCompare2.Location = new System.Drawing.Point(6, 51);
+            this.wholeCompare2.Name = "wholeCompare2";
+            this.wholeCompare2.Size = new System.Drawing.Size(60, 35);
+            this.wholeCompare2.TabIndex = 3;
+            this.wholeCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wholeCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.demoCompare1);
+            this.groupBox14.Controls.Add(this.numCompare1);
+            this.groupBox14.Controls.Add(this.wholeCompare1);
+            this.groupBox14.Location = new System.Drawing.Point(15, 27);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(145, 121);
+            this.groupBox14.TabIndex = 3;
+            this.groupBox14.TabStop = false;
+            // 
+            // demoCompare1
+            // 
+            this.demoCompare1.Location = new System.Drawing.Point(79, 80);
+            this.demoCompare1.Name = "demoCompare1";
+            this.demoCompare1.Size = new System.Drawing.Size(60, 35);
+            this.demoCompare1.TabIndex = 5;
+            this.demoCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.demoCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // numCompare1
+            // 
+            this.numCompare1.Location = new System.Drawing.Point(79, 19);
+            this.numCompare1.Name = "numCompare1";
+            this.numCompare1.Size = new System.Drawing.Size(60, 35);
+            this.numCompare1.TabIndex = 4;
+            this.numCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // wholeCompare1
+            // 
+            this.wholeCompare1.Location = new System.Drawing.Point(6, 51);
+            this.wholeCompare1.Name = "wholeCompare1";
+            this.wholeCompare1.Size = new System.Drawing.Size(60, 35);
+            this.wholeCompare1.TabIndex = 3;
+            this.wholeCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wholeCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.groupBox15);
+            this.groupBox6.Controls.Add(this.label5);
+            this.groupBox6.Controls.Add(this.label3);
+            this.groupBox6.Controls.Add(this.texttChangeFrac);
+            this.groupBox6.Controls.Add(this.groupBox11);
+            this.groupBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(137)))), ((int)(((byte)(255)))));
+            this.groupBox6.Location = new System.Drawing.Point(9, 179);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(355, 166);
+            this.groupBox6.TabIndex = 5;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Tag = "";
+            this.groupBox6.Text = "Thập Phân Thành Phân Số";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(104, 87);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 29);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "=";
+            // 
+            // texttChangeFrac
+            // 
+            this.texttChangeFrac.Location = new System.Drawing.Point(0, 84);
+            this.texttChangeFrac.Name = "texttChangeFrac";
+            this.texttChangeFrac.Size = new System.Drawing.Size(95, 35);
+            this.texttChangeFrac.TabIndex = 9;
+            this.texttChangeFrac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.demoChangeFrac2);
+            this.groupBox11.Controls.Add(this.numChangeFrac2);
+            this.groupBox11.Enabled = false;
+            this.groupBox11.Location = new System.Drawing.Point(285, 34);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(64, 121);
+            this.groupBox11.TabIndex = 6;
+            this.groupBox11.TabStop = false;
+            // 
+            // numChangeFrac2
+            // 
+            this.numChangeFrac2.Location = new System.Drawing.Point(6, 19);
+            this.numChangeFrac2.Name = "numChangeFrac2";
+            this.numChangeFrac2.Size = new System.Drawing.Size(49, 35);
+            this.numChangeFrac2.TabIndex = 4;
+            this.numChangeFrac2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label2);
+            this.groupBox5.Controls.Add(this.groupBox10);
+            this.groupBox5.Controls.Add(this.groupBox9);
+            this.groupBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(137)))), ((int)(((byte)(255)))));
+            this.groupBox5.Location = new System.Drawing.Point(9, 2);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(355, 166);
+            this.groupBox5.TabIndex = 4;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Phân Số Tối Giản";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(175, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 29);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "=";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.demoRsMini);
+            this.groupBox10.Controls.Add(this.numRsMini);
+            this.groupBox10.Enabled = false;
+            this.groupBox10.Location = new System.Drawing.Point(231, 27);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(99, 121);
+            this.groupBox10.TabIndex = 2;
+            this.groupBox10.TabStop = false;
+            // 
+            // demoRsMini
+            // 
+            this.demoRsMini.Location = new System.Drawing.Point(19, 80);
+            this.demoRsMini.Name = "demoRsMini";
+            this.demoRsMini.Size = new System.Drawing.Size(60, 35);
+            this.demoRsMini.TabIndex = 5;
+            this.demoRsMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numRsMini
+            // 
+            this.numRsMini.Location = new System.Drawing.Point(19, 19);
+            this.numRsMini.Name = "numRsMini";
+            this.numRsMini.Size = new System.Drawing.Size(60, 35);
+            this.numRsMini.TabIndex = 4;
+            this.numRsMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.demoMini);
+            this.groupBox9.Controls.Add(this.numMini);
+            this.groupBox9.Controls.Add(this.wholeMini);
+            this.groupBox9.Location = new System.Drawing.Point(6, 27);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(145, 121);
+            this.groupBox9.TabIndex = 1;
+            this.groupBox9.TabStop = false;
+            // 
+            // demoMini
+            // 
+            this.demoMini.Location = new System.Drawing.Point(79, 80);
+            this.demoMini.Name = "demoMini";
+            this.demoMini.Size = new System.Drawing.Size(60, 35);
+            this.demoMini.TabIndex = 5;
+            this.demoMini.Tag = "2";
+            this.demoMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.demoMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
+            // 
+            // numMini
+            // 
+            this.numMini.Location = new System.Drawing.Point(79, 19);
+            this.numMini.Name = "numMini";
+            this.numMini.Size = new System.Drawing.Size(60, 35);
+            this.numMini.TabIndex = 4;
+            this.numMini.Tag = "1";
+            this.numMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
+            // 
+            // wholeMini
+            // 
+            this.wholeMini.Location = new System.Drawing.Point(6, 51);
+            this.wholeMini.Name = "wholeMini";
+            this.wholeMini.Size = new System.Drawing.Size(60, 35);
+            this.wholeMini.TabIndex = 3;
+            this.wholeMini.Tag = "3";
+            this.wholeMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.wholeMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
+            // 
+            // demoChangeFrac2
+            // 
+            this.demoChangeFrac2.Location = new System.Drawing.Point(6, 80);
+            this.demoChangeFrac2.Name = "demoChangeFrac2";
+            this.demoChangeFrac2.Size = new System.Drawing.Size(49, 35);
+            this.demoChangeFrac2.TabIndex = 5;
+            this.demoChangeFrac2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(257, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 29);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "=";
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.wholeChangeFrac1);
+            this.groupBox15.Controls.Add(this.demoChangeFrac1);
+            this.groupBox15.Controls.Add(this.numChangeFrac1);
+            this.groupBox15.Enabled = false;
+            this.groupBox15.Location = new System.Drawing.Point(137, 34);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(118, 121);
+            this.groupBox15.TabIndex = 12;
+            this.groupBox15.TabStop = false;
+            // 
+            // demoChangeFrac1
+            // 
+            this.demoChangeFrac1.Location = new System.Drawing.Point(63, 80);
+            this.demoChangeFrac1.Name = "demoChangeFrac1";
+            this.demoChangeFrac1.Size = new System.Drawing.Size(49, 35);
+            this.demoChangeFrac1.TabIndex = 5;
+            this.demoChangeFrac1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // numChangeFrac1
+            // 
+            this.numChangeFrac1.Location = new System.Drawing.Point(63, 19);
+            this.numChangeFrac1.Name = "numChangeFrac1";
+            this.numChangeFrac1.Size = new System.Drawing.Size(49, 35);
+            this.numChangeFrac1.TabIndex = 4;
+            this.numChangeFrac1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // wholeChangeFrac1
+            // 
+            this.wholeChangeFrac1.Location = new System.Drawing.Point(5, 50);
+            this.wholeChangeFrac1.Name = "wholeChangeFrac1";
+            this.wholeChangeFrac1.Size = new System.Drawing.Size(49, 35);
+            this.wholeChangeFrac1.TabIndex = 6;
+            this.wholeChangeFrac1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Form1
             // 
@@ -301,6 +707,29 @@
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -310,25 +739,61 @@
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtDemoinator1;
-        private System.Windows.Forms.TextBox txtNumerator1;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label lbMath;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnResult;
+        private System.Windows.Forms.Button btnDiivide;
+        private System.Windows.Forms.Button btnMultiply;
+        private System.Windows.Forms.Button btnSubtract;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txtDemoResult;
         private System.Windows.Forms.TextBox txtNumResult;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtDemoinator2;
         private System.Windows.Forms.TextBox txtNumerator2;
-        private System.Windows.Forms.Label lbMath;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnResult;
-        private System.Windows.Forms.Button btnDiivide;
-        private System.Windows.Forms.Button btnMultiply;
-        private System.Windows.Forms.Button btnSubtract;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtDemoinator1;
+        private System.Windows.Forms.TextBox txtNumerator1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox resultChangeNum;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox demoChangeNum;
+        private System.Windows.Forms.TextBox numChangeNum;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TextBox demoCompare2;
+        private System.Windows.Forms.TextBox numCompare2;
+        private System.Windows.Forms.TextBox wholeCompare2;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TextBox demoCompare1;
+        private System.Windows.Forms.TextBox numCompare1;
+        private System.Windows.Forms.TextBox wholeCompare1;
+        private System.Windows.Forms.TextBox texttChangeFrac;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TextBox numChangeFrac2;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox demoRsMini;
+        private System.Windows.Forms.TextBox numRsMini;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.TextBox demoMini;
+        private System.Windows.Forms.TextBox numMini;
+        private System.Windows.Forms.TextBox wholeMini;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbCompare;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox demoChangeFrac2;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TextBox wholeChangeFrac1;
+        private System.Windows.Forms.TextBox demoChangeFrac1;
+        private System.Windows.Forms.TextBox numChangeFrac1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

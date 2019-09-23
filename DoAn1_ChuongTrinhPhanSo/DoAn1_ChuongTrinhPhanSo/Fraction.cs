@@ -8,10 +8,40 @@ namespace DoAn1_ChuongTrinhPhanSo
 {
     public class Fraction
     {
+        protected int numerator;
+        protected int demoinator;
+
         //Tử số
-        public int Numerator { get; set; }
+        public int Numerator
+        {
+            get
+            {
+                return numerator;
+            }
+            set
+            {
+                numerator = value;
+            }
+        }
         //Mẫu số
-        public int Demoinator { get; set; }
+        public int Demoinator
+        {
+            get
+            {
+                return demoinator;
+            }
+            set
+            {
+                if (value == 0)
+                {
+                    throw new Exception("Mẫu số không được bằng 0 !");
+                }
+                else
+                {
+                    demoinator = value;
+                }
+            }
+        }
 
         public Fraction()
         {
@@ -47,8 +77,8 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             int n = Minimalism(this.Numerator, this.Demoinator);
 
-            this.Numerator /= n;
-            this.Demoinator /= n;
+            this.Numerator /= Math.Abs(n);
+            this.Demoinator /= Math.Abs(n);
         }
 
         private int Minimalism(int a, int b)
