@@ -398,7 +398,7 @@ namespace DoAn1_ChuongTrinhPhanSo
 
                         int result = cal.Compare();
 
-                         switch(result)
+                        switch (result)
                         {
                             case 0:
                                 lbCompare.Text = "=";
@@ -430,6 +430,47 @@ namespace DoAn1_ChuongTrinhPhanSo
         private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             Referesh();
+        }
+
+        private void TextChangeFrac_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (textChangeFrac.Text.Length > 0)
+                {
+                    if (!textChangeFrac.Text[textChangeFrac.Text.Length - 1].Equals('.'))
+                    {
+                        decimal num = decimal.Parse(textChangeFrac.Text);
+                        cal.Reset();
+
+                        int whole = cal.ChangeFraction(num);
+
+                        MixedFraction mixed = new MixedFraction(cal.Result.Numerator, cal.Result.Demoinator, whole == 0 ? 1 : whole);
+
+                        wholeChangeFrac1.Text = mixed.Whole.ToString();
+                        numChangeFrac1.Text = mixed.Numerator.ToString();
+                        demoChangeFrac1.Text = mixed.Demoinator.ToString();
+
+                        mixed.Minimalism();
+
+                        numChangeFrac2.Text = mixed.Numerator.ToString();
+                        demoChangeFrac2.Text = mixed.Demoinator.ToString();
+                    }
+                }
+                else
+                {
+                    cal.Reset();
+                    wholeChangeFrac1.ResetText();
+                    numChangeFrac1.ResetText();
+                    demoChangeFrac1.ResetText();
+                    numChangeFrac2.ResetText();
+                    demoChangeFrac2.ResetText();
+                }
+            }
+            catch (Exception err)
+            {
+                //MessageBox.Show(err.Message);
+            }
         }
     }
 }

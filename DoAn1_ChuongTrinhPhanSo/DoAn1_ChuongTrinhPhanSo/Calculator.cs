@@ -33,6 +33,13 @@ namespace DoAn1_ChuongTrinhPhanSo
             this.result = result;
         }
 
+        public void Reset()
+        {
+            Num1.Reset();
+            Num2.Reset();
+            Result.Reset();
+        }
+
         public void Add()
         {
             result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
@@ -81,6 +88,44 @@ namespace DoAn1_ChuongTrinhPhanSo
             else if (result.Numerator > 0) return 1;
 
             return -2;      //Lỗi
+        }
+
+        public int ChangeFraction(decimal n)
+        {
+            int sign = n < 0 ? -1 : 1;
+
+            n = Math.Abs(n);
+
+            int whole = (int)n;
+            decimal decimalPoint = n - (int)n;
+
+
+            result.Numerator = (int)(decimalPoint * (decimal)Math.Pow(10, CountDecimal(decimalPoint)));
+            result.Demoinator = (int)Math.Pow(10, CountDecimal(decimalPoint));
+            result.Minimalism();
+
+            if (sign == -1)
+            {
+                result.Numerator = Math.Abs(result.Numerator - result.Demoinator);
+                whole += 1;
+            }
+
+            return sign * whole;
+        }
+
+        private int CountDecimal(decimal n)
+        {
+
+            int count = 0;
+
+            while (n > 0)
+            {
+                count++;
+                n *= 10;
+                n -= (int)n;
+            }
+
+            return count;
         }
     }
 }
