@@ -12,7 +12,7 @@ namespace DoAn1_ChuongTrinhPhanSo
 
         public MixedFraction() : base()
         {
-            Whole = 1;
+            Whole = 0;
         }
 
         public MixedFraction(int num1, int num2, int num3) :base(num1, num2)
@@ -42,7 +42,7 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             Numerator += Whole * base.Demoinator;
             base.Minimalism();
-            Whole = 1;
+            Whole = 0;
         }
     }
 }

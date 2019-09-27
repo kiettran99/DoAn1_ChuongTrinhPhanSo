@@ -90,6 +90,34 @@ namespace DoAn1_ChuongTrinhPhanSo
             return -2;      //Lỗi
         }
 
+        private MixedFraction ToFraction(decimal n)
+        {
+            int sign = n < 0 ? -1 : 1;
+
+            n = Math.Abs(n);
+
+            int whole = (int)n;
+            decimal decimalPoint = n - (int)n;
+
+
+            MixedFraction mixedFraction = new MixedFraction();
+
+            mixedFraction.Numerator = (int)(decimalPoint * (decimal)Math.Pow(10, CountDecimal(decimalPoint)));
+            mixedFraction.Demoinator = (int)Math.Pow(10, CountDecimal(decimalPoint));
+
+            mixedFraction.Minimalism();
+
+            if (sign == -1)
+            {
+                result.Numerator = Math.Abs(result.Numerator - result.Demoinator);
+                whole += 1;
+            }
+
+            mixedFraction.Whole = sign * whole;
+
+            return mixedFraction;
+        }
+
         public int ChangeFraction(decimal n)
         {
             int sign = n < 0 ? -1 : 1;
@@ -111,6 +139,78 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
 
             return sign * whole;
+        }
+
+        public bool isWhole(decimal n)
+        {
+            return (int)n == n;
+        }
+
+        public Fraction ToFraction(Calculator cal, decimal num, decimal demo)
+        {
+            try
+            {
+                //Nếu phân số đầu tiên là số nguyên ta sẽ làm bình thường
+                if (cal.isWhole(num) && cal.isWhole(demo))
+                {
+                    return new Fraction(Convert.ToInt32(num), Convert.ToInt32(demo));
+                }
+                else
+                {
+                    if (!cal.isWhole(num) && cal.isWhole(demo))
+                    {
+                        MixedFraction mix = cal.ToFraction(num);
+                        mix.Minimalism();
+
+                        Calculator calTemp = new Calculator();
+
+                        calTemp.Num1 = mix;
+                        calTemp.Num2 = new Fraction(1, Convert.ToInt32(demo));
+
+                        calTemp.Multiply();
+
+                        return calTemp.Result;
+                    }
+                    else
+                    {
+                        if (cal.isWhole(num) && !cal.isWhole(demo))
+                        {
+                            MixedFraction mix = cal.ToFraction(demo);
+                            mix.Minimalism();
+
+                            Calculator calTemp = new Calculator();
+
+                            calTemp.Num1 = new Fraction(Convert.ToInt32(num), 1);
+                            calTemp.Num2 = mix;
+
+                            calTemp.Divide();
+
+                            return calTemp.Result;
+                        }
+                        else
+                        {
+                            Calculator calTemp = new Calculator();
+
+                            MixedFraction mix1 = cal.ToFraction(num);
+                            mix1.Minimalism();
+
+                            MixedFraction mix2 = cal.ToFraction(demo);
+                            mix2.Minimalism();
+
+                            calTemp.num1 = mix1;
+                            calTemp.num2 = mix2;
+
+                            calTemp.Divide();
+
+                            return calTemp.result;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                throw new Exception("Kiểm tra tử sử hoặc mẫu số nhập hợp lệ không ?");
+            }
         }
 
         private int CountDecimal(decimal n)

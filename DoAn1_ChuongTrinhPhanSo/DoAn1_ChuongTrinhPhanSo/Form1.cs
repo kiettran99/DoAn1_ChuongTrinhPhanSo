@@ -111,7 +111,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     }
                     else
                     {
-                        cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                        cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator2.Text), decimal.Parse(txtDemoinator2.Text));
                     }
 
                     //cal.Result.Reset();
@@ -148,7 +148,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     }
                     else
                     {
-                        cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                        cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator2.Text), decimal.Parse(txtDemoinator2.Text));
                     }
 
                     //cal.Result.Reset();
@@ -186,7 +186,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     }
                     else
                     {
-                        cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                        cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator2.Text), decimal.Parse(txtDemoinator2.Text));
                         Call(preMath);
                     }
 
@@ -223,7 +223,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     }
                     else
                     {
-                        cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+                        cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator2.Text), decimal.Parse(txtDemoinator2.Text));
                         Call(preMath);
                     }
 
@@ -243,8 +243,10 @@ namespace DoAn1_ChuongTrinhPhanSo
             try
             {
                 preMath = lbMath.Text;
-                cal.Num1.Assign(int.Parse(txtNumerator1.Text), int.Parse(txtDemoinator1.Text));
-                cal.Num2.Assign(int.Parse(txtNumerator2.Text), int.Parse(txtDemoinator2.Text));
+
+                cal.Num1 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator1.Text), decimal.Parse(txtDemoinator1.Text));
+                cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator2.Text), decimal.Parse(txtDemoinator2.Text));
+
                 Call(lbMath.Text);
                 isMulti = true;
             }
@@ -257,6 +259,16 @@ namespace DoAn1_ChuongTrinhPhanSo
         private void TxtTS2_TextChanged(object sender, EventArgs e)
         {
             isInput = true;
+        }
+
+        private void TextFraction1_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtNumerator1.Text.Equals("") && !txtDemoinator1.Text.Equals(""))
+                    cal.Result = cal.ToFraction(new Calculator(), decimal.Parse(txtNumerator1.Text), decimal.Parse(txtDemoinator1.Text));
+            }
+            catch { }
         }
 
         private void TextMinimalism_TextChanged(object sender, EventArgs e)
@@ -445,7 +457,7 @@ namespace DoAn1_ChuongTrinhPhanSo
 
                         int whole = cal.ChangeFraction(num);
 
-                        MixedFraction mixed = new MixedFraction(cal.Result.Numerator, cal.Result.Demoinator, whole == 0 ? 1 : whole);
+                        MixedFraction mixed = new MixedFraction(cal.Result.Numerator, cal.Result.Demoinator, whole == 0 ? 0 : whole);
 
                         wholeChangeFrac1.Text = mixed.Whole.ToString();
                         numChangeFrac1.Text = mixed.Numerator.ToString();

@@ -310,6 +310,7 @@
             this.txtDemoinator1.Size = new System.Drawing.Size(70, 35);
             this.txtDemoinator1.TabIndex = 2;
             this.txtDemoinator1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDemoinator1.TextChanged += new System.EventHandler(this.TextFraction1_TextChanged);
             // 
             // txtNumerator1
             // 
@@ -318,6 +319,7 @@
             this.txtNumerator1.Size = new System.Drawing.Size(70, 35);
             this.txtNumerator1.TabIndex = 1;
             this.txtNumerator1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumerator1.TextChanged += new System.EventHandler(this.TextFraction1_TextChanged);
             // 
             // tabPage3
             // 
