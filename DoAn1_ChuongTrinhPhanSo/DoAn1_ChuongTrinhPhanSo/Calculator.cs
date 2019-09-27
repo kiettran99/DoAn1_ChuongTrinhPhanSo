@@ -209,6 +209,63 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             catch
             {
+                throw new Exception("Kiểm tra tử sử hoặc mẫu số nhập hợp lệ không, có thể mẫu số bằng 0?");
+            }
+        }
+
+        //Chuyển 2 số dạng phân số
+        public MixedFraction ToMixedFraction(Calculator cal, decimal num, decimal demo, decimal whole)
+        {
+            try
+            {
+                if (cal.isWhole(num) && cal.isWhole(demo) && !cal.isWhole(whole))
+                {
+                    Fraction fracWhole = cal.ToFraction(whole);
+
+                    fracWhole = (fracWhole * Convert.ToInt32(demo) + Convert.ToInt32(num)) / Convert.ToInt32(demo);
+
+                    return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                }
+                else
+                {
+                    if (cal.isWhole(num) && !cal.isWhole(demo) && !cal.isWhole(whole))
+                    {
+                        //Chuyển thập phân thành phân số cho phầ thực
+                        Fraction fracWhole = cal.ToFraction(whole);
+                        //Chuyển thập phân thành phân số cho phần mẫu
+                        Fraction fracDemo = cal.ToFraction(demo);
+
+                        fracWhole = ((fracWhole * fracDemo) + Convert.ToInt32(num)) / fracDemo;
+
+                        return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                    }
+                    else
+                    {
+                        if (!cal.isWhole(num) && !cal.isWhole(demo) && !cal.isWhole(whole))
+                        {
+                            //Chuyển thập phân thành phân số cho phầ thực
+                            Fraction fracWhole = cal.ToFraction(whole);
+                            //Chuyển thập phân thành phân số cho phần mẫu
+                            Fraction fracDemo = cal.ToFraction(demo);
+                            //Chuyển thập phân thành phân số cho phần tử
+                            Fraction fracNum = cal.ToFraction(num);
+
+
+                            fracWhole = ((fracWhole * fracDemo) + fracNum) / fracDemo;
+
+                            return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                        }
+                        else
+                        {
+                            Fraction frac = cal.ToFraction(new Calculator(), num, demo);
+
+                            return new MixedFraction(frac.Numerator, frac.Demoinator, Convert.ToInt32(whole));
+                        }
+                    }
+                }
+            }
+            catch
+            {
                 throw new Exception("Kiểm tra tử sử hoặc mẫu số nhập hợp lệ không ?");
             }
         }

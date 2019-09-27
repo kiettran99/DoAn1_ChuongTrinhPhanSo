@@ -86,5 +86,58 @@ namespace DoAn1_ChuongTrinhPhanSo
             if (a % b == 0) return b;
             return Minimalism(b, a % b);
         }
+
+        //Operator overloading
+        #region Phân số với phân số
+        public static Fraction operator +(Fraction num1, Fraction num2)
+        {
+            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator, num1.Demoinator * num2.Demoinator);
+            frac.Minimalism();
+            return frac;
+        }
+
+        public static Fraction operator -(Fraction num1, Fraction num2)
+        {
+            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator, num1.Demoinator * num2.Demoinator);
+            frac.Minimalism();
+            return frac;
+        }
+
+        public static Fraction operator *(Fraction num1, Fraction num2)
+        {
+            Fraction frac = new Fraction(num1.Numerator * num2.Numerator, num1.Demoinator * num2.Demoinator);
+            frac.Minimalism();
+            return frac;
+        }
+
+        public static Fraction operator /(Fraction num1, Fraction num2)
+        {
+            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator, num1.Demoinator * num2.Numerator);
+            frac.Minimalism();
+            return frac;
+        }
+
+        #endregion
+        #region Phân số cộng với số nguyên
+        public static Fraction operator +(Fraction f, int n)
+        {
+            return new Fraction(f.Numerator + n * f.Demoinator, f.Demoinator);
+        }
+        public static Fraction operator -(Fraction f, int n)
+        {
+            return new Fraction(f.Numerator - n * f.Demoinator, f.Demoinator);
+        }
+
+        public static Fraction operator* (Fraction f, int n)
+        {
+            return new Fraction(f.Numerator * n, f.Demoinator);
+        }
+
+        public static Fraction operator /(Fraction f, int n)
+        {
+            return new Fraction(f.Numerator, f.Demoinator * n);
+        }
+
+        #endregion
     }
 }

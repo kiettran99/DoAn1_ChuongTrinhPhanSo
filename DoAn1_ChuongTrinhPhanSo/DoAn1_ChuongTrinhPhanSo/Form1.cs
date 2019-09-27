@@ -271,17 +271,16 @@ namespace DoAn1_ChuongTrinhPhanSo
             catch { }
         }
 
+        #region Khu Vực của Tab2: Phép tính khác.
+
         private void TextMinimalism_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 if (!numMini.Text.Equals("") && !demoMini.Text.Equals("") && !wholeMini.Text.Equals(""))
                 {
-                    int num = Convert.ToInt32(numMini.Text);
-                    int demo = Convert.ToInt32(demoMini.Text);
-                    int whole = Convert.ToInt32(wholeMini.Text);
-
-                    MixedFraction mixed = new MixedFraction(num, demo, whole);
+                    MixedFraction mixed = cal.ToMixedFraction(new Calculator(), Convert.ToDecimal(numMini.Text),
+                        Convert.ToDecimal(demoMini.Text), Convert.ToDecimal(wholeMini.Text));
 
                     mixed.Minimalism();
 
@@ -292,11 +291,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 {
                     if (!numMini.Text.Equals("") && !demoMini.Text.Equals(""))
                     {
-                        int num = Convert.ToInt32(numMini.Text);
-                        int demo = Convert.ToInt32(demoMini.Text);
-
-                        Fraction fraction = new Fraction(num, demo);
-                        fraction.Minimalism();
+                        Fraction fraction = cal.ToFraction(new Calculator(), Convert.ToDecimal(numMini.Text), Convert.ToDecimal(demoMini.Text));
 
                         numRsMini.Text = fraction.Numerator.ToString();
                         demoRsMini.Text = fraction.Demoinator.ToString();
@@ -310,7 +305,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 resultChangeNum.ResetText();
             }
         }
@@ -321,10 +316,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             {
                 if (!numChangeNum.Text.Equals("") && !demoChangeNum.Text.Equals(""))
                 {
-                    int num = Convert.ToInt32(numChangeNum.Text);
-                    int demo = Convert.ToInt32(demoChangeNum.Text);
-
-                    Fraction fraction = new Fraction(num, demo);
+                    Fraction fraction = cal.ToFraction(new Calculator(), Convert.ToDecimal(numChangeNum.Text), Convert.ToDecimal(demoChangeNum.Text));
                     fraction.Minimalism();
 
                     resultChangeNum.Text = ((float)fraction.Numerator / fraction.Demoinator).ToString();
@@ -337,7 +329,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 resultChangeNum.ResetText();
             }
         }
@@ -349,23 +341,18 @@ namespace DoAn1_ChuongTrinhPhanSo
                 if (!numCompare1.Text.Equals("") && !demoCompare1.Text.Equals("") && !wholeCompare1.Text.Equals("")
                         && !numCompare2.Text.Equals("") && !demoCompare2.Text.Equals("") && !wholeCompare2.Text.Equals(""))
                 {
-                    int num1 = Convert.ToInt32(numCompare1.Text);
-                    int demo1 = Convert.ToInt32(demoCompare1.Text);
-                    int whole1 = Convert.ToInt32(wholeCompare1.Text);
-
-                    MixedFraction mixed1 = new MixedFraction(num1, demo1, whole1);
-                    mixed1.Minimalism();
-
-                    int num2 = Convert.ToInt32(numCompare2.Text);
-                    int demo2 = Convert.ToInt32(demoCompare2.Text);
-                    int whole2 = Convert.ToInt32(wholeCompare2.Text);
-
-                    MixedFraction mixed2 = new MixedFraction(num2, demo2, whole2);
-                    mixed2.Minimalism();
-
                     //Dùng class calculator để xử lí
-                    cal.Num1 = mixed1;
-                    cal.Num2 = mixed2;
+                    MixedFraction mix1 = cal.ToMixedFraction(new Calculator(), Convert.ToDecimal(numCompare1.Text),
+                        Convert.ToDecimal(demoCompare1.Text), Convert.ToDecimal(wholeCompare1.Text));
+
+                    MixedFraction mix2 = cal.ToMixedFraction(new Calculator(), Convert.ToDecimal(numCompare2.Text),
+                        Convert.ToDecimal(demoCompare2.Text), Convert.ToDecimal(wholeCompare2.Text));
+
+                    mix1.Minimalism();
+                    mix2.Minimalism();
+
+                    cal.Num1 = mix1;
+                    cal.Num2 = mix2;
 
                     int result = cal.Compare();
 
@@ -390,23 +377,9 @@ namespace DoAn1_ChuongTrinhPhanSo
                     if (!numCompare1.Text.Equals("") && !demoCompare1.Text.Equals("")
                         && !numCompare2.Text.Equals("") && !demoCompare2.Text.Equals(""))
                     {
-                        //Lấy dữ liệu phần số 1 để so sánh
-                        int num1 = Convert.ToInt32(numCompare1.Text);
-                        int demo1 = Convert.ToInt32(demoCompare1.Text);
-
-                        Fraction fraction1 = new Fraction(num1, demo1);
-                        fraction1.Minimalism();
-
-                        //Lấy dữ liệu phần số 2 để so sánh
-                        int num2 = Convert.ToInt32(numCompare2.Text);
-                        int demo2 = Convert.ToInt32(demoCompare2.Text);
-
-                        Fraction fraction2 = new Fraction(num2, demo2);
-                        fraction2.Minimalism();
-
                         //Dùng class calculator để xử lí
-                        cal.Num1 = fraction1;
-                        cal.Num2 = fraction2;
+                        cal.Num1 = cal.ToFraction(new Calculator(), decimal.Parse(numCompare1.Text), decimal.Parse(demoCompare1.Text));
+                        cal.Num2 = cal.ToFraction(new Calculator(), decimal.Parse(numCompare2.Text), decimal.Parse(demoCompare2.Text));
 
                         int result = cal.Compare();
 
@@ -434,7 +407,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             catch (Exception err)
             {
-                MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 resultChangeNum.ResetText();
             }
         }
@@ -484,5 +457,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 //MessageBox.Show(err.Message);
             }
         }
+
+        #endregion
     }
 }
