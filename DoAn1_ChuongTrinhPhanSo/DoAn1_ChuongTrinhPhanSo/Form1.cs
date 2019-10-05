@@ -306,7 +306,8 @@ namespace DoAn1_ChuongTrinhPhanSo
             catch (Exception err)
             {
                 //MessageBox.Show(err.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                resultChangeNum.ResetText();
+                numRsMini.ResetText();
+                demoRsMini.ResetText();
             }
         }
 
@@ -455,6 +456,12 @@ namespace DoAn1_ChuongTrinhPhanSo
             catch (Exception err)
             {
                 //MessageBox.Show(err.Message);
+                wholeChangeFrac1.ResetText();
+                numChangeFrac1.ResetText();
+                demoChangeFrac1.ResetText();
+
+                numChangeFrac2.ResetText();
+                demoChangeFrac2.ResetText();
             }
         }
 
