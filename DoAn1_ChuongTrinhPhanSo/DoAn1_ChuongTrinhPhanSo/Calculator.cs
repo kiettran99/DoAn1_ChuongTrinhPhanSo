@@ -109,8 +109,15 @@ namespace DoAn1_ChuongTrinhPhanSo
 
             if (sign == -1)
             {
-                result.Numerator = Math.Abs(result.Numerator - result.Demoinator);
-                whole += 1;
+                if (whole > 0)
+                {
+                    mixedFraction.Numerator = Math.Abs(mixedFraction.Numerator - mixedFraction.Demoinator);
+                    whole += 1;
+                }
+                else
+                {
+                    mixedFraction.Numerator *= -1;
+                }
             }
 
             mixedFraction.Whole = sign * whole;
@@ -146,10 +153,35 @@ namespace DoAn1_ChuongTrinhPhanSo
             return (int)n == n;
         }
 
+        /// <summary>
+        /// Phương thức xử lí các số âm ở mẫu, hoặc cùng âm dành cho phân số.
+        /// </summary>
+        /// <param name="num">Tử số</param>
+        /// <param name="demo">Mẫu Số</param>
+        public void ResolveNegative(ref decimal num, ref decimal demo)
+        {
+            //Kiểm tra các số âm
+            if (num < 0 && demo < 0)
+            {
+                num = Math.Abs(num);
+                demo = Math.Abs(demo);
+            }
+            else
+            {
+                if (num > 0 && demo < 0)
+                {
+                    num *= -1;
+                    demo = Math.Abs(demo);
+                }
+            }
+        }
+
         public Fraction ToFraction(Calculator cal, decimal num, decimal demo)
         {
             try
             {
+                ResolveNegative(ref num, ref demo);
+
                 //Nếu phân số đầu tiên là số nguyên ta sẽ làm bình thường
                 if (cal.isWhole(num) && cal.isWhole(demo))
                 {

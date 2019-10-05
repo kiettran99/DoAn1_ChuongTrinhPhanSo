@@ -5,6 +5,5 @@ C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPh
 C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.Form1.resources
 C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.Properties.Resources.resources
 C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.csproj.GenerateResource.cache
-C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.csproj.CoreCompileInputs.cache
 C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.exe
 C:\Users\Micro-Star\Documents\GitHub\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\DoAn1_ChuongTrinhPhanSo\obj\Debug\DoAn1_ChuongTrinhPhanSo.pdb
