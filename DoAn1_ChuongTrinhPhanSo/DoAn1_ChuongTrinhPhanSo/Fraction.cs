@@ -55,24 +55,30 @@ namespace DoAn1_ChuongTrinhPhanSo
             Demoinator = num2;
         }
 
+        //Phương thức gán giá trị tử và mẫu.
         public void Assign(int num1, int num2)
         {
             Numerator = num1;
             Demoinator = num2;
         }
 
+        //Phương thức trở về giá trị ban đầu.
         public void Reset()
         {
             Numerator = 0;
             Demoinator = 1;
         }
 
+        //Sao chép dữ liệu đã có sẵn.
         public void Coppy(Fraction num)
         {
             Numerator = num.Numerator;
             Demoinator = num.Demoinator;
         }
         
+        /// <summary>
+        /// Phân số tối giản.
+        /// </summary>
         public void Minimalism()
         {
             int n = Minimalism(this.Numerator, this.Demoinator);
@@ -81,6 +87,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             this.Demoinator /= Math.Abs(n);
         }
 
+        //Tìm ước chung lớn nhất.
         private int Minimalism(int a, int b)
         {
             if (a % b == 0) return b;

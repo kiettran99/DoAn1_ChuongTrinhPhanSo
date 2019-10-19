@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DoAn1_ChuongTrinhPhanSo")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Chương Trình Phân Số")]
+[assembly: AssemblyDescription("Chương trình tính phân số cho phép người dùng thực hiện những phép toán phân số,  ngoài ra có những tính năng thêm như so sánh, chuyển đổi sang thập phân.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DoAn1_ChuongTrinhPhanSo")]
+[assembly: AssemblyProduct("ChuongTrinhPhanSo")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

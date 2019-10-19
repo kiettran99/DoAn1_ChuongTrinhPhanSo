@@ -60,6 +60,10 @@ namespace DoAn1_ChuongTrinhPhanSo
             isInput = false;
         }
 
+
+        /// <summary>
+        ///    Giải quyết những trường hợp thực hiện phép tính phân số.
+        /// </summary>
         private void Call(string lb)
         {
             switch (lb)
@@ -91,6 +95,10 @@ namespace DoAn1_ChuongTrinhPhanSo
             tabControl.SelectedIndex = 1;
         }
 
+
+        /// <summary>
+        ///     Phép tính cộng 2 phân số.
+        /// </summary>
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -127,6 +135,10 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+
+        /// <summary>
+        ///     Phép tính trừ 2 phân số.
+        /// </summary>
         private void BtnSubtract_Click(object sender, EventArgs e)
         {
             try
@@ -164,6 +176,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Phép tính nhân 2 phân số.
+        /// </summary>
         private void BtnMultiply_Click(object sender, EventArgs e)
         {
             try
@@ -182,6 +197,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                         cal.Num2.Reset();
                         txtNumerator2.Text = "0";
                         txtDemoinator2.Text = "1";
+                        preMath = "+";
                         Call("+");
                     }
                     else
@@ -193,7 +209,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     //cal.Result.Reset();
                     //txtTSKQ.Text = "0";
                     //txtMSKQ.Text = "1";
-                }
+                 }
             }
             catch (Exception err)
             {
@@ -201,6 +217,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Phép tính chia 2 phân số.
+        /// </summary>
         private void BtnDiivide_Click(object sender, EventArgs e)
         {
             try
@@ -219,6 +238,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                         cal.Num2.Reset();
                         txtNumerator2.Text = "0";
                         txtDemoinator2.Text = "1";
+                        preMath = "+";
                         Call("+");
                     }
                     else
@@ -238,6 +258,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Giải phép toán hiện tại.
+        /// </summary>
         private void BtnResult_Click(object sender, EventArgs e)
         {
             try
@@ -256,11 +279,17 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Cờ hiệu được bật lên khi người dùng thay đổi phân số thứ 2.
+        /// </summary>
         private void TxtTS2_TextChanged(object sender, EventArgs e)
         {
             isInput = true;
         }
 
+        /// <summary>
+        ///     Xử lí phân số khi người dùng nhập.
+        /// </summary>
         private void TextFraction1_TextChanged(object sender, EventArgs e)
         {
             try
@@ -273,6 +302,9 @@ namespace DoAn1_ChuongTrinhPhanSo
 
         #region Khu Vực của Tab2: Phép tính khác.
 
+        /// <summary>
+        ///     Tối giản phân số.
+        /// </summary>
         private void TextMinimalism_TextChanged(object sender, EventArgs e)
         {
             try
@@ -311,6 +343,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Chuyển phân số thành số thập phân.
+        /// </summary>
         private void TextNumber_TextChanged(object sender, EventArgs e)
         {
             try
@@ -335,6 +370,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     So sánh các phân số với nhau cho kết quả.
+        /// </summary>
         private void TextCompare_TextChanged(object sender, EventArgs e)
         {
             try
@@ -413,11 +451,17 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Làm mới lại form này.
+        /// </summary>
         private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
             Referesh();
         }
 
+        /// <summary>
+        ///     Chuyển số thập phân sang hỗn số và phân số khi người dùng nhập dữ liệu.
+        /// </summary>
         private void TextChangeFrac_TextChanged(object sender, EventArgs e)
         {
             try
@@ -466,5 +510,13 @@ namespace DoAn1_ChuongTrinhPhanSo
         }
 
         #endregion
+
+        /// <summary>
+        ///  Truy cập link github của project thông qua trình duyệt mặc định.
+        /// </summary>
+        private void linkProject_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start((sender as LinkLabel).Text);
+        }
     }
 }

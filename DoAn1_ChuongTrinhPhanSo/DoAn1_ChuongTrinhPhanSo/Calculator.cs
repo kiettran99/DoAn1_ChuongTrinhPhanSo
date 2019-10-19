@@ -33,6 +33,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             this.result = result;
         }
 
+        /// <summary>
+        ///     Trở về lại giá trị lúc ban đầu.
+        /// </summary>
         public void Reset()
         {
             Num1.Reset();
@@ -40,6 +43,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             Result.Reset();
         }
 
+        /// <summary>
+        /// Phép tính cộng hai phân số và trả kết quả về phân số result.
+        /// </summary>
         public void Add()
         {
             result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
@@ -47,6 +53,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             Result.Minimalism();
         }
 
+        /// <summary>
+        /// Phép tính trừ hai phân số và trả kết quả về phân số result.
+        /// </summary>
         public void Subtract()
         {
             result.Numerator = num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator;
@@ -54,6 +63,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             Result.Minimalism();
         }
 
+        /// <summary>
+        /// Phép tính nhân hai phân số và trả kết quả về phân số result.
+        /// </summary>
         public void Multiply()
         {
             result.Numerator = num1.Numerator * num2.Numerator;
@@ -61,6 +73,9 @@ namespace DoAn1_ChuongTrinhPhanSo
             Result.Minimalism();
         }
 
+        /// <summary>
+        /// Phép tính chia hai phân số và trả kết quả về phân số result.
+        /// </summary>
         public void Divide()
         {
             if (num2.Numerator == 0)
@@ -90,6 +105,11 @@ namespace DoAn1_ChuongTrinhPhanSo
             return -2;      //Lỗi
         }
 
+      /// <summary>
+      ///   Chuyển số thập phân thành hỗn số.
+      /// </summary>
+      /// <param name="n">Số thập phân nhận từ bên ngoài.</param>
+      /// <returns>Kiểu phân số</returns>
         private MixedFraction ToFraction(decimal n)
         {
             int sign = n < 0 ? -1 : 1;
@@ -125,6 +145,11 @@ namespace DoAn1_ChuongTrinhPhanSo
             return mixedFraction;
         }
 
+        /// <summary>
+        ///   Chuyển số thập phân thành hỗn số.
+        /// </summary>
+        /// <param name="n">Số thập phân nhận từ bên ngoài.</param>
+        /// <returns>Phần thực của hỗn số</returns>
         public int ChangeFraction(decimal n)
         {
             int sign = n < 0 ? -1 : 1;
@@ -176,6 +201,13 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        ///     Xử lí phân số nếu tử hoặc mẫu là số thập phân.
+        /// </summary>
+        /// <param name="cal"> Lớp Tính toán dùng độc lập để tính toán trả về kết quả.</param>
+        /// <param name="num"> Tử số</param>
+        /// <param name="demo"> Mẫu số</param>
+        /// <returns></returns>
         public Fraction ToFraction(Calculator cal, decimal num, decimal demo)
         {
             try
@@ -245,7 +277,14 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
-        //Chuyển 2 số dạng phân số
+        /// <summary>
+        ///   Xử lí hỗn số nếu tử hoặc mẫu và phần thực là số thập phân.
+        /// </summary>
+        /// <param name="cal"> Lớp Tính toán dùng độc lập để tính toán trả về kết quả.</param>
+        /// <param name="num"> Tử số</param>
+        /// <param name="demo"> Mẫu số</param>
+        /// <param name="whole"> Phần thực</param>
+        /// <returns>Kiểu Hỗ số.</returns>
         public MixedFraction ToMixedFraction(Calculator cal, decimal num, decimal demo, decimal whole)
         {
             try
@@ -302,6 +341,11 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
 
+        /// <summary>
+        /// Phương thức trả về số lượng sau dấu ".".
+        /// </summary>
+        /// <param name="n">Số thập phân.</param>
+        /// <returns>số lượng số nguyên sau dấu ".".</returns>
         private int CountDecimal(decimal n)
         {
 
