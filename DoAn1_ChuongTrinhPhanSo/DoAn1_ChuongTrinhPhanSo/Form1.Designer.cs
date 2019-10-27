@@ -31,6 +31,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.linkProject = new System.Windows.Forms.LinkLabel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -43,12 +51,15 @@
             this.btnSubtract = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.txtDemoResult = new System.Windows.Forms.TextBox();
             this.txtNumResult = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.txtDemoinator2 = new System.Windows.Forms.TextBox();
             this.txtNumerator2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.txtDemoinator1 = new System.Windows.Forms.TextBox();
             this.txtNumerator1 = new System.Windows.Forms.TextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -56,15 +67,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.resultChangeNum = new System.Windows.Forms.TextBox();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.demoChangeNum = new System.Windows.Forms.TextBox();
             this.numChangeNum = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.lbCompare = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.demoCompare2 = new System.Windows.Forms.TextBox();
             this.numCompare2 = new System.Windows.Forms.TextBox();
             this.wholeCompare2 = new System.Windows.Forms.TextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.demoCompare1 = new System.Windows.Forms.TextBox();
             this.numCompare1 = new System.Windows.Forms.TextBox();
             this.wholeCompare1 = new System.Windows.Forms.TextBox();
@@ -82,22 +96,19 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.demoRsMini = new System.Windows.Forms.TextBox();
             this.numRsMini = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.demoMini = new System.Windows.Forms.TextBox();
             this.numMini = new System.Windows.Forms.TextBox();
             this.wholeMini = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.linkProject = new System.Windows.Forms.LinkLabel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -116,7 +127,6 @@
             this.groupBox5.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -143,6 +153,93 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Giới Thiệu";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkProject);
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(3, 163);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(785, 190);
+            this.panel1.TabIndex = 1;
+            // 
+            // linkProject
+            // 
+            this.linkProject.AutoSize = true;
+            this.linkProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkProject.Location = new System.Drawing.Point(196, 157);
+            this.linkProject.Name = "linkProject";
+            this.linkProject.Size = new System.Drawing.Size(513, 25);
+            this.linkProject.TabIndex = 10;
+            this.linkProject.TabStop = true;
+            this.linkProject.Text = "https://github.com/radiun42/DoAn1_ChuongTrinhPhanSo";
+            this.linkProject.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProject_LinkClicked);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(56, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(134, 25);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Source Code:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(472, 111);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 25);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "17110104";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(196, 111);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(188, 25);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Phạm Đình Chương ";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(472, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 25);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "17110165";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(196, 70);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(138, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Trần Đức Kiệt:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(268, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(257, 29);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Sinh Viên Thực Hiện:";
             // 
             // pictureBox1
             // 
@@ -265,6 +362,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.panel4);
             this.groupBox3.Controls.Add(this.txtDemoResult);
             this.groupBox3.Controls.Add(this.txtNumResult);
             this.groupBox3.Enabled = false;
@@ -273,6 +371,14 @@
             this.groupBox3.Size = new System.Drawing.Size(85, 145);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(9, 74);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(70, 2);
+            this.panel4.TabIndex = 7;
             // 
             // txtDemoResult
             // 
@@ -292,6 +398,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.panel2);
             this.groupBox2.Controls.Add(this.txtDemoinator2);
             this.groupBox2.Controls.Add(this.txtNumerator2);
             this.groupBox2.Location = new System.Drawing.Point(211, 79);
@@ -299,6 +406,14 @@
             this.groupBox2.Size = new System.Drawing.Size(85, 145);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Location = new System.Drawing.Point(7, 74);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(70, 2);
+            this.panel2.TabIndex = 7;
             // 
             // txtDemoinator2
             // 
@@ -320,6 +435,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.panel3);
             this.groupBox1.Controls.Add(this.txtDemoinator1);
             this.groupBox1.Controls.Add(this.txtNumerator1);
             this.groupBox1.Location = new System.Drawing.Point(38, 79);
@@ -327,6 +443,14 @@
             this.groupBox1.Size = new System.Drawing.Size(85, 145);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(7, 74);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(70, 2);
+            this.panel3.TabIndex = 7;
             // 
             // txtDemoinator1
             // 
@@ -394,6 +518,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.panel9);
             this.groupBox12.Controls.Add(this.demoChangeNum);
             this.groupBox12.Controls.Add(this.numChangeNum);
             this.groupBox12.Location = new System.Drawing.Point(21, 34);
@@ -401,6 +526,14 @@
             this.groupBox12.Size = new System.Drawing.Size(99, 121);
             this.groupBox12.TabIndex = 7;
             this.groupBox12.TabStop = false;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Black;
+            this.panel9.Location = new System.Drawing.Point(20, 65);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(60, 2);
+            this.panel9.TabIndex = 7;
             // 
             // demoChangeNum
             // 
@@ -444,6 +577,7 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Controls.Add(this.panel8);
             this.groupBox13.Controls.Add(this.demoCompare2);
             this.groupBox13.Controls.Add(this.numCompare2);
             this.groupBox13.Controls.Add(this.wholeCompare2);
@@ -452,6 +586,14 @@
             this.groupBox13.Size = new System.Drawing.Size(145, 121);
             this.groupBox13.TabIndex = 4;
             this.groupBox13.TabStop = false;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Black;
+            this.panel8.Location = new System.Drawing.Point(79, 66);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(60, 2);
+            this.panel8.TabIndex = 7;
             // 
             // demoCompare2
             // 
@@ -482,6 +624,7 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.panel7);
             this.groupBox14.Controls.Add(this.demoCompare1);
             this.groupBox14.Controls.Add(this.numCompare1);
             this.groupBox14.Controls.Add(this.wholeCompare1);
@@ -490,6 +633,14 @@
             this.groupBox14.Size = new System.Drawing.Size(145, 121);
             this.groupBox14.TabIndex = 3;
             this.groupBox14.TabStop = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Black;
+            this.panel7.Location = new System.Drawing.Point(79, 66);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(60, 2);
+            this.panel7.TabIndex = 7;
             // 
             // demoCompare1
             // 
@@ -536,6 +687,7 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.panel11);
             this.groupBox15.Controls.Add(this.wholeChangeFrac1);
             this.groupBox15.Controls.Add(this.demoChangeFrac1);
             this.groupBox15.Controls.Add(this.numChangeFrac1);
@@ -602,6 +754,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.panel10);
             this.groupBox11.Controls.Add(this.demoChangeFrac2);
             this.groupBox11.Controls.Add(this.numChangeFrac2);
             this.groupBox11.Enabled = false;
@@ -653,6 +806,7 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.panel6);
             this.groupBox10.Controls.Add(this.demoRsMini);
             this.groupBox10.Controls.Add(this.numRsMini);
             this.groupBox10.Enabled = false;
@@ -661,6 +815,14 @@
             this.groupBox10.Size = new System.Drawing.Size(99, 121);
             this.groupBox10.TabIndex = 2;
             this.groupBox10.TabStop = false;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(19, 66);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(60, 2);
+            this.panel6.TabIndex = 7;
             // 
             // demoRsMini
             // 
@@ -682,6 +844,7 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.panel5);
             this.groupBox9.Controls.Add(this.demoMini);
             this.groupBox9.Controls.Add(this.numMini);
             this.groupBox9.Controls.Add(this.wholeMini);
@@ -690,6 +853,14 @@
             this.groupBox9.Size = new System.Drawing.Size(145, 121);
             this.groupBox9.TabIndex = 1;
             this.groupBox9.TabStop = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(79, 66);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(60, 2);
+            this.panel5.TabIndex = 7;
             // 
             // demoMini
             // 
@@ -721,92 +892,21 @@
             this.wholeMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.wholeMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
             // 
-            // panel1
+            // panel11
             // 
-            this.panel1.Controls.Add(this.linkProject);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 163);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(785, 190);
-            this.panel1.TabIndex = 1;
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(63, 65);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(44, 2);
+            this.panel11.TabIndex = 7;
             // 
-            // label7
+            // panel10
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(196, 70);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 25);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Trần Đức Kiệt:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(268, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(257, 29);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Sinh Viên Thực Hiện:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(472, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 25);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "17110165";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(196, 111);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(188, 25);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Phạm Đình Chương ";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(472, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(100, 25);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "17110104";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(56, 157);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(134, 25);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Source Code:";
-            // 
-            // linkProject
-            // 
-            this.linkProject.AutoSize = true;
-            this.linkProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkProject.Location = new System.Drawing.Point(196, 157);
-            this.linkProject.Name = "linkProject";
-            this.linkProject.Size = new System.Drawing.Size(513, 25);
-            this.linkProject.TabIndex = 10;
-            this.linkProject.TabStop = true;
-            this.linkProject.Text = "https://github.com/radiun42/DoAn1_ChuongTrinhPhanSo";
-            this.linkProject.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProject_LinkClicked);
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(11, 65);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(44, 2);
+            this.panel10.TabIndex = 7;
             // 
             // Form1
             // 
@@ -822,6 +922,8 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
@@ -855,8 +957,6 @@
             this.groupBox10.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -930,6 +1030,16 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel10;
     }
 }
 

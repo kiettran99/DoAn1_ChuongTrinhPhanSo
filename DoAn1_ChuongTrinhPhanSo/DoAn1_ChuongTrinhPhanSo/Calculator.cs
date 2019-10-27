@@ -48,8 +48,9 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Add()
         {
-            result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
-            result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
+            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            result = num1 + num2;
             Result.Minimalism();
         }
 
@@ -58,8 +59,9 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Subtract()
         {
-            result.Numerator = num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator;
-            result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Numerator = num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator;
+            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            result = num1 - num2;
             Result.Minimalism();
         }
 
@@ -68,8 +70,9 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Multiply()
         {
-            result.Numerator = num1.Numerator * num2.Numerator;
-            result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Numerator = num1.Numerator * num2.Numerator;
+            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            result = num1 * num2;
             Result.Minimalism();
         }
 
@@ -84,8 +87,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             else
             {
-                result.Numerator = num1.Numerator * num2.Demoinator;
-                result.Demoinator = num1.Demoinator * num2.Numerator;
+                result = num1 / num2;
                 Result.Minimalism();
             }
         }
