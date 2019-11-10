@@ -48,8 +48,8 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Add()
         {
-            //result.Numerator = num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator;
-            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Numerator = num1.Numerator * num2.Denominator + num2.Numerator * num1.Denominator;
+            //result.Denominator = num1.Denominator * num2.Denominator;
             result = num1 + num2;
             Result.Minimalism();
         }
@@ -59,8 +59,8 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Subtract()
         {
-            //result.Numerator = num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator;
-            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Numerator = num1.Numerator * num2.Denominator - num2.Numerator * num1.Denominator;
+            //result.Denominator = num1.Denominator * num2.Denominator;
             result = num1 - num2;
             Result.Minimalism();
         }
@@ -71,7 +71,7 @@ namespace DoAn1_ChuongTrinhPhanSo
         public void Multiply()
         {
             //result.Numerator = num1.Numerator * num2.Numerator;
-            //result.Demoinator = num1.Demoinator * num2.Demoinator;
+            //result.Denominator = num1.Denominator * num2.Denominator;
             result = num1 * num2;
             Result.Minimalism();
         }
@@ -125,7 +125,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             MixedFraction mixedFraction = new MixedFraction();
 
             mixedFraction.Numerator = (int)(decimalPoint * (decimal)Math.Pow(10, CountDecimal(decimalPoint)));
-            mixedFraction.Demoinator = (int)Math.Pow(10, CountDecimal(decimalPoint));
+            mixedFraction.Denominator = (int)Math.Pow(10, CountDecimal(decimalPoint));
 
             mixedFraction.Minimalism();
 
@@ -133,7 +133,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             {
                 if (whole > 0)
                 {
-                    mixedFraction.Numerator = Math.Abs(mixedFraction.Numerator - mixedFraction.Demoinator);
+                    mixedFraction.Numerator = Math.Abs(mixedFraction.Numerator - mixedFraction.Denominator);
                     whole += 1;
                 }
                 else
@@ -163,19 +163,25 @@ namespace DoAn1_ChuongTrinhPhanSo
 
 
             result.Numerator = (int)(decimalPoint * (decimal)Math.Pow(10, CountDecimal(decimalPoint)));
-            result.Demoinator = (int)Math.Pow(10, CountDecimal(decimalPoint));
+            result.Denominator = (int)Math.Pow(10, CountDecimal(decimalPoint));
             result.Minimalism();
 
             if (sign == -1)
             {
-                result.Numerator = Math.Abs(result.Numerator - result.Demoinator);
+                result.Numerator = Math.Abs(result.Numerator - result.Denominator);
                 whole += 1;
             }
 
             return sign * whole;
         }
 
-        public bool isWhole(decimal n)
+
+        /// <summary>
+        /// Kiểm tra số vừa nhập là số nguyên dương.
+        /// </summary>
+        /// <param name="n">Số nhận từ bên ngoài.</param>
+        /// <returns></returns>
+        public bool IsWhole(decimal n)
         {
             return (int)n == n;
         }
@@ -217,13 +223,13 @@ namespace DoAn1_ChuongTrinhPhanSo
                 ResolveNegative(ref num, ref demo);
 
                 //Nếu phân số đầu tiên là số nguyên ta sẽ làm bình thường
-                if (cal.isWhole(num) && cal.isWhole(demo))
+                if (cal.IsWhole(num) && cal.IsWhole(demo))
                 {
                     return new Fraction(Convert.ToInt32(num), Convert.ToInt32(demo));
                 }
                 else
                 {
-                    if (!cal.isWhole(num) && cal.isWhole(demo))
+                    if (!cal.IsWhole(num) && cal.IsWhole(demo))
                     {
                         MixedFraction mix = cal.ToFraction(num);
                         mix.Minimalism();
@@ -239,7 +245,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     }
                     else
                     {
-                        if (cal.isWhole(num) && !cal.isWhole(demo))
+                        if (cal.IsWhole(num) && !cal.IsWhole(demo))
                         {
                             MixedFraction mix = cal.ToFraction(demo);
                             mix.Minimalism();
@@ -291,17 +297,17 @@ namespace DoAn1_ChuongTrinhPhanSo
         {
             try
             {
-                if (cal.isWhole(num) && cal.isWhole(demo) && !cal.isWhole(whole))
+                if (cal.IsWhole(num) && cal.IsWhole(demo) && !cal.IsWhole(whole))
                 {
                     Fraction fracWhole = cal.ToFraction(whole);
 
                     fracWhole = (fracWhole * Convert.ToInt32(demo) + Convert.ToInt32(num)) / Convert.ToInt32(demo);
 
-                    return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                    return new MixedFraction(fracWhole.Numerator, fracWhole.Denominator, 0);
                 }
                 else
                 {
-                    if (cal.isWhole(num) && !cal.isWhole(demo) && !cal.isWhole(whole))
+                    if (cal.IsWhole(num) && !cal.IsWhole(demo) && !cal.IsWhole(whole))
                     {
                         //Chuyển thập phân thành phân số cho phầ thực
                         Fraction fracWhole = cal.ToFraction(whole);
@@ -310,11 +316,11 @@ namespace DoAn1_ChuongTrinhPhanSo
 
                         fracWhole = ((fracWhole * fracDemo) + Convert.ToInt32(num)) / fracDemo;
 
-                        return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                        return new MixedFraction(fracWhole.Numerator, fracWhole.Denominator, 0);
                     }
                     else
                     {
-                        if (!cal.isWhole(num) && !cal.isWhole(demo) && !cal.isWhole(whole))
+                        if (!cal.IsWhole(num) && !cal.IsWhole(demo) && !cal.IsWhole(whole))
                         {
                             //Chuyển thập phân thành phân số cho phầ thực
                             Fraction fracWhole = cal.ToFraction(whole);
@@ -326,13 +332,13 @@ namespace DoAn1_ChuongTrinhPhanSo
 
                             fracWhole = ((fracWhole * fracDemo) + fracNum) / fracDemo;
 
-                            return new MixedFraction(fracWhole.Numerator, fracWhole.Demoinator, 0);
+                            return new MixedFraction(fracWhole.Numerator, fracWhole.Denominator, 0);
                         }
                         else
                         {
                             Fraction frac = cal.ToFraction(new Calculator(), num, demo);
 
-                            return new MixedFraction(frac.Numerator, frac.Demoinator, Convert.ToInt32(whole));
+                            return new MixedFraction(frac.Numerator, frac.Denominator, Convert.ToInt32(whole));
                         }
                     }
                 }

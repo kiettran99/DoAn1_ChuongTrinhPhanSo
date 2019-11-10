@@ -9,7 +9,7 @@ namespace DoAn1_ChuongTrinhPhanSo
     public class Fraction
     {
         protected int numerator;
-        protected int demoinator;
+        protected int denominator;
 
         //Tử số
         public int Numerator
@@ -24,11 +24,11 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
         }
         //Mẫu số
-        public int Demoinator
+        public int Denominator
         {
             get
             {
-                return demoinator;
+                return denominator;
             }
             set
             {
@@ -38,7 +38,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 }
                 else
                 {
-                    demoinator = value;
+                    denominator = value;
                 }
             }
         }
@@ -46,34 +46,34 @@ namespace DoAn1_ChuongTrinhPhanSo
         public Fraction()
         {
             Numerator = 0;
-            Demoinator = 1;
+            Denominator = 1;
         }
 
         public Fraction(int num1 , int num2)
         {
             Numerator = num1;
-            Demoinator = num2;
+            Denominator = num2;
         }
 
         //Phương thức gán giá trị tử và mẫu.
         public void Assign(int num1, int num2)
         {
             Numerator = num1;
-            Demoinator = num2;
+            Denominator = num2;
         }
 
         //Phương thức trở về giá trị ban đầu.
         public void Reset()
         {
             Numerator = 0;
-            Demoinator = 1;
+            Denominator = 1;
         }
 
         //Sao chép dữ liệu đã có sẵn.
         public void Coppy(Fraction num)
         {
             Numerator = num.Numerator;
-            Demoinator = num.Demoinator;
+            Denominator = num.Denominator;
         }
         
         /// <summary>
@@ -81,10 +81,10 @@ namespace DoAn1_ChuongTrinhPhanSo
         /// </summary>
         public void Minimalism()
         {
-            int n = Minimalism(this.Numerator, this.Demoinator);
+            int n = Minimalism(this.Numerator, this.Denominator);
 
             this.Numerator /= Math.Abs(n);
-            this.Demoinator /= Math.Abs(n);
+            this.Denominator /= Math.Abs(n);
         }
 
         //Tìm ước chung lớn nhất.
@@ -98,28 +98,28 @@ namespace DoAn1_ChuongTrinhPhanSo
         #region Phân số với phân số
         public static Fraction operator +(Fraction num1, Fraction num2)
         {
-            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator + num2.Numerator * num1.Demoinator, num1.Demoinator * num2.Demoinator);
+            Fraction frac = new Fraction(num1.Numerator * num2.Denominator + num2.Numerator * num1.Denominator, num1.Denominator * num2.Denominator);
             frac.Minimalism();
             return frac;
         }
 
         public static Fraction operator -(Fraction num1, Fraction num2)
         {
-            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator - num2.Numerator * num1.Demoinator, num1.Demoinator * num2.Demoinator);
+            Fraction frac = new Fraction(num1.Numerator * num2.Denominator - num2.Numerator * num1.Denominator, num1.Denominator * num2.Denominator);
             frac.Minimalism();
             return frac;
         }
 
         public static Fraction operator *(Fraction num1, Fraction num2)
         {
-            Fraction frac = new Fraction(num1.Numerator * num2.Numerator, num1.Demoinator * num2.Demoinator);
+            Fraction frac = new Fraction(num1.Numerator * num2.Numerator, num1.Denominator * num2.Denominator);
             frac.Minimalism();
             return frac;
         }
 
         public static Fraction operator /(Fraction num1, Fraction num2)
         {
-            Fraction frac = new Fraction(num1.Numerator * num2.Demoinator, num1.Demoinator * num2.Numerator);
+            Fraction frac = new Fraction(num1.Numerator * num2.Denominator, num1.Denominator * num2.Numerator);
             frac.Minimalism();
             return frac;
         }
@@ -128,21 +128,21 @@ namespace DoAn1_ChuongTrinhPhanSo
         #region Phân số cộng với số nguyên
         public static Fraction operator +(Fraction f, int n)
         {
-            return new Fraction(f.Numerator + n * f.Demoinator, f.Demoinator);
+            return new Fraction(f.Numerator + n * f.Denominator, f.Denominator);
         }
         public static Fraction operator -(Fraction f, int n)
         {
-            return new Fraction(f.Numerator - n * f.Demoinator, f.Demoinator);
+            return new Fraction(f.Numerator - n * f.Denominator, f.Denominator);
         }
 
         public static Fraction operator* (Fraction f, int n)
         {
-            return new Fraction(f.Numerator * n, f.Demoinator);
+            return new Fraction(f.Numerator * n, f.Denominator);
         }
 
         public static Fraction operator /(Fraction f, int n)
         {
-            return new Fraction(f.Numerator, f.Demoinator * n);
+            return new Fraction(f.Numerator, f.Denominator * n);
         }
 
         #endregion

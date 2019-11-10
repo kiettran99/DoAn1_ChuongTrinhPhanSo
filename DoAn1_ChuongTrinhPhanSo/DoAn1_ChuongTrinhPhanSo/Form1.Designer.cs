@@ -84,6 +84,7 @@
             this.wholeCompare1 = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.wholeChangeFrac1 = new System.Windows.Forms.TextBox();
             this.demoChangeFrac1 = new System.Windows.Forms.TextBox();
             this.numChangeFrac1 = new System.Windows.Forms.TextBox();
@@ -91,6 +92,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textChangeFrac = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.demoChangeFrac2 = new System.Windows.Forms.TextBox();
             this.numChangeFrac2 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -104,8 +106,6 @@
             this.demoMini = new System.Windows.Forms.TextBox();
             this.numMini = new System.Windows.Forms.TextBox();
             this.wholeMini = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -385,7 +385,7 @@
             this.txtDemoResult.Location = new System.Drawing.Point(7, 89);
             this.txtDemoResult.Name = "txtDemoResult";
             this.txtDemoResult.Size = new System.Drawing.Size(70, 35);
-            this.txtDemoResult.TabIndex = 3;
+            this.txtDemoResult.TabIndex = 6;
             this.txtDemoResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumResult
@@ -393,7 +393,7 @@
             this.txtNumResult.Location = new System.Drawing.Point(7, 27);
             this.txtNumResult.Name = "txtNumResult";
             this.txtNumResult.Size = new System.Drawing.Size(70, 35);
-            this.txtNumResult.TabIndex = 2;
+            this.txtNumResult.TabIndex = 5;
             this.txtNumResult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox2
@@ -540,7 +540,7 @@
             this.demoChangeNum.Location = new System.Drawing.Point(19, 80);
             this.demoChangeNum.Name = "demoChangeNum";
             this.demoChangeNum.Size = new System.Drawing.Size(60, 35);
-            this.demoChangeNum.TabIndex = 5;
+            this.demoChangeNum.TabIndex = 12;
             this.demoChangeNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.demoChangeNum.TextChanged += new System.EventHandler(this.TextNumber_TextChanged);
             // 
@@ -549,7 +549,7 @@
             this.numChangeNum.Location = new System.Drawing.Point(19, 19);
             this.numChangeNum.Name = "numChangeNum";
             this.numChangeNum.Size = new System.Drawing.Size(60, 35);
-            this.numChangeNum.TabIndex = 4;
+            this.numChangeNum.TabIndex = 11;
             this.numChangeNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numChangeNum.TextChanged += new System.EventHandler(this.TextNumber_TextChanged);
             // 
@@ -600,7 +600,7 @@
             this.demoCompare2.Location = new System.Drawing.Point(79, 80);
             this.demoCompare2.Name = "demoCompare2";
             this.demoCompare2.Size = new System.Drawing.Size(60, 35);
-            this.demoCompare2.TabIndex = 5;
+            this.demoCompare2.TabIndex = 9;
             this.demoCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.demoCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -609,7 +609,7 @@
             this.numCompare2.Location = new System.Drawing.Point(79, 19);
             this.numCompare2.Name = "numCompare2";
             this.numCompare2.Size = new System.Drawing.Size(60, 35);
-            this.numCompare2.TabIndex = 4;
+            this.numCompare2.TabIndex = 8;
             this.numCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -618,7 +618,7 @@
             this.wholeCompare2.Location = new System.Drawing.Point(6, 51);
             this.wholeCompare2.Name = "wholeCompare2";
             this.wholeCompare2.Size = new System.Drawing.Size(60, 35);
-            this.wholeCompare2.TabIndex = 3;
+            this.wholeCompare2.TabIndex = 7;
             this.wholeCompare2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.wholeCompare2.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -647,7 +647,7 @@
             this.demoCompare1.Location = new System.Drawing.Point(79, 80);
             this.demoCompare1.Name = "demoCompare1";
             this.demoCompare1.Size = new System.Drawing.Size(60, 35);
-            this.demoCompare1.TabIndex = 5;
+            this.demoCompare1.TabIndex = 6;
             this.demoCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.demoCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -656,7 +656,7 @@
             this.numCompare1.Location = new System.Drawing.Point(79, 19);
             this.numCompare1.Name = "numCompare1";
             this.numCompare1.Size = new System.Drawing.Size(60, 35);
-            this.numCompare1.TabIndex = 4;
+            this.numCompare1.TabIndex = 5;
             this.numCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -665,7 +665,7 @@
             this.wholeCompare1.Location = new System.Drawing.Point(6, 51);
             this.wholeCompare1.Name = "wholeCompare1";
             this.wholeCompare1.Size = new System.Drawing.Size(60, 35);
-            this.wholeCompare1.TabIndex = 3;
+            this.wholeCompare1.TabIndex = 4;
             this.wholeCompare1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.wholeCompare1.TextChanged += new System.EventHandler(this.TextCompare_TextChanged);
             // 
@@ -697,6 +697,14 @@
             this.groupBox15.Size = new System.Drawing.Size(118, 121);
             this.groupBox15.TabIndex = 12;
             this.groupBox15.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Black;
+            this.panel11.Location = new System.Drawing.Point(67, 65);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(44, 2);
+            this.panel11.TabIndex = 7;
             // 
             // wholeChangeFrac1
             // 
@@ -748,7 +756,7 @@
             this.textChangeFrac.Location = new System.Drawing.Point(0, 84);
             this.textChangeFrac.Name = "textChangeFrac";
             this.textChangeFrac.Size = new System.Drawing.Size(95, 35);
-            this.textChangeFrac.TabIndex = 9;
+            this.textChangeFrac.TabIndex = 10;
             this.textChangeFrac.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textChangeFrac.TextChanged += new System.EventHandler(this.TextChangeFrac_TextChanged);
             // 
@@ -763,6 +771,14 @@
             this.groupBox11.Size = new System.Drawing.Size(64, 121);
             this.groupBox11.TabIndex = 6;
             this.groupBox11.TabStop = false;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Black;
+            this.panel10.Location = new System.Drawing.Point(5, 66);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(50, 2);
+            this.panel10.TabIndex = 7;
             // 
             // demoChangeFrac2
             // 
@@ -867,7 +883,7 @@
             this.demoMini.Location = new System.Drawing.Point(79, 80);
             this.demoMini.Name = "demoMini";
             this.demoMini.Size = new System.Drawing.Size(60, 35);
-            this.demoMini.TabIndex = 5;
+            this.demoMini.TabIndex = 3;
             this.demoMini.Tag = "2";
             this.demoMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.demoMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
@@ -877,7 +893,7 @@
             this.numMini.Location = new System.Drawing.Point(79, 19);
             this.numMini.Name = "numMini";
             this.numMini.Size = new System.Drawing.Size(60, 35);
-            this.numMini.TabIndex = 4;
+            this.numMini.TabIndex = 2;
             this.numMini.Tag = "1";
             this.numMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.numMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
@@ -887,29 +903,14 @@
             this.wholeMini.Location = new System.Drawing.Point(6, 51);
             this.wholeMini.Name = "wholeMini";
             this.wholeMini.Size = new System.Drawing.Size(60, 35);
-            this.wholeMini.TabIndex = 3;
+            this.wholeMini.TabIndex = 1;
             this.wholeMini.Tag = "3";
             this.wholeMini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.wholeMini.TextChanged += new System.EventHandler(this.TextMinimalism_TextChanged);
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Black;
-            this.panel11.Location = new System.Drawing.Point(63, 65);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(44, 2);
-            this.panel11.TabIndex = 7;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Black;
-            this.panel10.Location = new System.Drawing.Point(11, 65);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(44, 2);
-            this.panel10.TabIndex = 7;
-            // 
             // Form1
             // 
+            this.AcceptButton = this.btnResult;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));

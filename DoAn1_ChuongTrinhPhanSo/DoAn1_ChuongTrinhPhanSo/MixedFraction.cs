@@ -40,7 +40,7 @@ namespace DoAn1_ChuongTrinhPhanSo
 
         public new void Minimalism()
         {
-            Numerator += Whole * base.Demoinator;
+            Numerator += Whole * base.Denominator;
             base.Minimalism();
             Whole = 0;
         }

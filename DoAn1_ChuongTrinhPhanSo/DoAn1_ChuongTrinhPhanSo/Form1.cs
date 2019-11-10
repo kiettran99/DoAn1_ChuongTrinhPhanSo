@@ -83,7 +83,7 @@ namespace DoAn1_ChuongTrinhPhanSo
             }
             isInput = false;
             txtNumResult.Text = cal.Result.Numerator.ToString();
-            txtDemoResult.Text = cal.Result.Demoinator.ToString();
+            txtDemoResult.Text = cal.Result.Denominator.ToString();
         }
 
 
@@ -109,7 +109,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 {
                     cal.Num1.Coppy(cal.Result);
                     txtNumerator1.Text = cal.Num1.Numerator.ToString();
-                    txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
+                    txtDemoinator1.Text = cal.Num1.Denominator.ToString();
 
                     if (!isInput)
                     {
@@ -150,7 +150,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 {
                     cal.Num1.Coppy(cal.Result);
                     txtNumerator1.Text = cal.Num1.Numerator.ToString();
-                    txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
+                    txtDemoinator1.Text = cal.Num1.Denominator.ToString();
 
                     if (!isInput)
                     {
@@ -190,7 +190,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 {
                     cal.Num1.Coppy(cal.Result);
                     txtNumerator1.Text = cal.Num1.Numerator.ToString();
-                    txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
+                    txtDemoinator1.Text = cal.Num1.Denominator.ToString();
 
                     if (!isInput)
                     {
@@ -231,7 +231,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                 {
                     cal.Num1.Coppy(cal.Result);
                     txtNumerator1.Text = cal.Num1.Numerator.ToString();
-                    txtDemoinator1.Text = cal.Num1.Demoinator.ToString();
+                    txtDemoinator1.Text = cal.Num1.Denominator.ToString();
 
                     if (!isInput)
                     {
@@ -317,16 +317,17 @@ namespace DoAn1_ChuongTrinhPhanSo
                     mixed.Minimalism();
 
                     numRsMini.Text = mixed.Numerator.ToString();
-                    demoRsMini.Text = mixed.Demoinator.ToString();
+                    demoRsMini.Text = mixed.Denominator.ToString();
                 }
                 else
                 {
                     if (!numMini.Text.Equals("") && !demoMini.Text.Equals(""))
                     {
                         Fraction fraction = cal.ToFraction(new Calculator(), Convert.ToDecimal(numMini.Text), Convert.ToDecimal(demoMini.Text));
+                        fraction.Minimalism();
 
                         numRsMini.Text = fraction.Numerator.ToString();
-                        demoRsMini.Text = fraction.Demoinator.ToString();
+                        demoRsMini.Text = fraction.Denominator.ToString();
                     }
                     else
                     {
@@ -355,7 +356,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     Fraction fraction = cal.ToFraction(new Calculator(), Convert.ToDecimal(numChangeNum.Text), Convert.ToDecimal(demoChangeNum.Text));
                     fraction.Minimalism();
 
-                    resultChangeNum.Text = ((float)fraction.Numerator / fraction.Demoinator).ToString();
+                    resultChangeNum.Text = ((float)fraction.Numerator / fraction.Denominator).ToString();
 
                 }
                 else
@@ -475,16 +476,16 @@ namespace DoAn1_ChuongTrinhPhanSo
 
                         int whole = cal.ChangeFraction(num);
 
-                        MixedFraction mixed = new MixedFraction(cal.Result.Numerator, cal.Result.Demoinator, whole == 0 ? 0 : whole);
+                        MixedFraction mixed = new MixedFraction(cal.Result.Numerator, cal.Result.Denominator, whole == 0 ? 0 : whole);
 
                         wholeChangeFrac1.Text = mixed.Whole.ToString();
                         numChangeFrac1.Text = mixed.Numerator.ToString();
-                        demoChangeFrac1.Text = mixed.Demoinator.ToString();
+                        demoChangeFrac1.Text = mixed.Denominator.ToString();
 
                         mixed.Minimalism();
 
                         numChangeFrac2.Text = mixed.Numerator.ToString();
-                        demoChangeFrac2.Text = mixed.Demoinator.ToString();
+                        demoChangeFrac2.Text = mixed.Denominator.ToString();
                     }
                 }
                 else
