@@ -36,7 +36,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     FractionBigNum fractionBigNum = new FractionBigNum(output, BigDecimal.One);
                     fractionBigNum = CalculatorBigNum.ToFractionBignum(fractionBigNum.Numerator, fractionBigNum.Denominator);
 
-                    lbResult.Text = $"= {fractionBigNum.Numerator} / {fractionBigNum.Denominator} = {CalculatorBigNum.Round(output)}";
+                    txtResult.Text = $"= {fractionBigNum.Numerator} / {fractionBigNum.Denominator} = {CalculatorBigNum.Round(output)}";
                 }
                 else
                 {
@@ -46,7 +46,7 @@ namespace DoAn1_ChuongTrinhPhanSo
                     Calculator cal = new Calculator();
 
                     Fraction fraction = cal.ToFraction(cal, output == 0 ? 0 : Convert.ToDecimal(output.ToString("#.#####")), 1);
-                    lbResult.Text = $"= {fraction.Numerator} / {fraction.Denominator} = {output}";
+                    txtResult.Text = $"= {fraction.Numerator} / {fraction.Denominator} = {output}";
                 }
                 if (textBox1.Text.Length > 0 && textBox1.Text[0].Equals('0'))
                     textBox1.Text = textBox1.Text.Remove(0, 1);

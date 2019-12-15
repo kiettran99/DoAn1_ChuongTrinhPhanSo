@@ -104,7 +104,9 @@ namespace DoAn1_ChuongTrinhPhanSo.UtilityCalculator
         #region Phân số với phân số
         public static FractionBigNum operator +(FractionBigNum num1, FractionBigNum num2)
         {
-            FractionBigNum frac = new FractionBigNum(num1.Numerator.Multiply(num2.Denominator) + num2.Numerator.Multiply(num1.Denominator), num1.Denominator.Multiply(num2.Denominator));
+            BigDecimal num = num1.Numerator.Multiply(num2.Denominator).Add(num2.Numerator.Multiply(num1.Denominator));
+            BigDecimal demo = num1.Denominator.Multiply(num2.Denominator);
+            FractionBigNum frac = new FractionBigNum(num, demo);
             frac.Minimalism();
             return frac;
         }
