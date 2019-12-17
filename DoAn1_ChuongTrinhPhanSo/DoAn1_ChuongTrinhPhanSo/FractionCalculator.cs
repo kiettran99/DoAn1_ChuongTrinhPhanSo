@@ -28,30 +28,22 @@ namespace DoAn1_ChuongTrinhPhanSo
                 if (text == '-')
                     textBox1.Text = textBox1.Text.Insert(0, "0");
                 string input = textBox1.Text;
-                if (input.Length > 10)
-                {
-                    //decimal output = InfixExpressionCalculator.EvaluateInfix(input);
-                    BigDecimal output = UtilityBigNum.ToDecimal(input);
+                input = UtilityBigNum.ResolveExpressions(input);
 
-                    FractionBigNum fractionBigNum = new FractionBigNum(output, BigDecimal.One);
-                    fractionBigNum = CalculatorBigNum.ToFractionBignum(fractionBigNum.Numerator, fractionBigNum.Denominator);
+                BigDecimal output = UtilityBigNum.ToDecimal(input);
 
-                    txtResult.Text = $"= {fractionBigNum.Numerator} / {fractionBigNum.Denominator} = {CalculatorBigNum.Round(output)}";
-                }
-                else
-                {
-                    //decimal output = InfixExpressionCalculator.EvaluateInfix(input);
-                    decimal output = input.ToDecimal();
+                FractionBigNum fractionBigNum = new FractionBigNum(output, BigDecimal.One);
+                fractionBigNum = CalculatorBigNum.ToFractionBignum(fractionBigNum.Numerator, fractionBigNum.Denominator);
 
-                    Calculator cal = new Calculator();
+                txtResult.Text = $"= {fractionBigNum.Numerator} / {fractionBigNum.Denominator} = {CalculatorBigNum.Round(output)}";
 
-                    Fraction fraction = cal.ToFraction(cal, output == 0 ? 0 : Convert.ToDecimal(output.ToString("#.#####")), 1);
-                    txtResult.Text = $"= {fraction.Numerator} / {fraction.Denominator} = {output}";
-                }
                 if (textBox1.Text.Length > 0 && textBox1.Text[0].Equals('0'))
                     textBox1.Text = textBox1.Text.Remove(0, 1);
             }
-            catch { }
+            catch
+            {
+                MessageBox.Show("Biểu thức nhập không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void b1_Click(object sender, EventArgs e)
@@ -132,7 +124,7 @@ namespace DoAn1_ChuongTrinhPhanSo
 
         private void bn1_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + "*(";
+            textBox1.Text = textBox1.Text + "(";
         }
 
         private void bn2_Click(object sender, EventArgs e)

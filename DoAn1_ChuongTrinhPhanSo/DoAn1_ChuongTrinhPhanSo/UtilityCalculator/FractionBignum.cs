@@ -89,8 +89,9 @@ namespace DoAn1_ChuongTrinhPhanSo.UtilityCalculator
         {
             BigDecimal n = Minimalism(this.Numerator, this.Denominator);
 
-            this.Numerator /= n.Abs();
-            this.Denominator /= n.Abs();
+            Numerator = Numerator.Divide(n.Abs());
+            Denominator = Denominator.SetScale(5, RoundingMode.HalfEven);
+            Denominator = Denominator.Divide(n.Abs());
         }
 
         //Tìm ước chung lớn nhất.
